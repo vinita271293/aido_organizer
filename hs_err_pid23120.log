@@ -1,0 +1,1364 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f34277375fe, pid=23120, tid=0x00007f34252fa700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_242) (build 1.8.0_242-release-1644-b3-6222593)
+# Java VM: OpenJDK 64-Bit Server VM (25.242-b3-6222593 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x8e55fe]  oopDesc* PSPromotionManager::copy_to_survivor_space<false>(oopDesc*)+0x6e
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f3420026800):  GCTaskThread [stack: 0x00007f34251fb000,0x00007f34252fb000] [id=23127]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00000000f5625078, RCX=0x0000000000000028, RDX=0x00007f3427b3de20
+RSP=0x00007f34252f9c40, RBP=0x00007f34252f9ca0, RSI=0x00000000f5625078, RDI=0x0000000100ac13d8
+R8 =0x0000000000000000, R9 =0x00007f3420077358, R10=0x0000000000000000, R11=0x00007f3427b67d00
+R12=0x0000000000000005, R13=0x0000000000000001, R14=0x00007f34200772c0, R15=0x00007f3427b3de30
+RIP=0x00007f34277375fe, EFLAGS=0x0000000000010246, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f34252f9c40)
+0x00007f34252f9c40:   00007f34200772c0 0000000000000015
+0x00007f34252f9c50:   0000000000000015 000000008f8b0108
+0x00007f34252f9c60:   000000008f8af628 0000000000000400
+0x00007f34252f9c70:   0000000000000000 00007f34200772c0
+0x00007f34252f9c80:   000000008f88fc40 0000000000000001
+0x00007f34252f9c90:   00007f3420077358 00007f3427b3de30
+0x00007f34252f9ca0:   00007f34252f9d20 00007f3427737060
+0x00007f34252f9cb0:   00007f34252f9d20 00007f3420077328
+0x00007f34252f9cc0:   00007f34252f9d20 00007f342773b3e0
+0x00007f34252f9cd0:   000078b900001fa6 000000008f88faa8
+0x00007f34252f9ce0:   000078b900001fa7 0000000000000400
+0x00007f34252f9cf0:   00007f3420026800 0000000000000003
+0x00007f34252f9d00:   00007f34252f9d50 00007f34252f9d60
+0x00007f34252f9d10:   0000000000000000 00007f3420077670
+0x00007f34252f9d20:   00007f34252f9da0 00007f342773b12a
+0x00007f34252f9d30:   00007f3427b3de30 000000008b4daee0
+0x00007f34252f9d40:   00007f33c005e690 00007f34200772c0
+0x00007f34252f9d50:   00007f347c268e9e 00007f342768b87b
+0x00007f34252f9d60:   000000008b4daee1 00007f3420021070
+0x00007f34252f9d70:   00007f34252f9da0 0000000000000001
+0x00007f34252f9d80:   00007f33c005e690 00007f34278b3128
+0x00007f34252f9d90:   00007f3420026800 00007f3427b5c9a8
+0x00007f34252f9da0:   00007f34252f9eb0 00007f34273f6a22
+0x00007f34252f9db0:   00000000000003d8 00007f34200275e8
+0x00007f34252f9dc0:   00007f3420027210 00007f34252f9e40
+0x00007f34252f9dd0:   00007f34200271c0 00007f3420027200
+0x00007f34252f9de0:   00007f34252f9df0 0000000000000000
+0x00007f34252f9df0:   0000000000000000 00007f3420027d00
+0x00007f34252f9e00:   00007f3420026800 00007f34200275f0
+0x00007f34252f9e10:   00007f3420027630 00007f3420027640
+0x00007f34252f9e20:   00007f3420027718 00000000000000d8
+0x00007f34252f9e30:   00007f3420027850 00007f34200281c0 
+
+Instructions: (pc=0x00007f34277375fe)
+0x00007f34277375de:   01 0f 85 83 02 00 00 89 c8 c1 f8 03 41 f6 c0 01
+0x00007f34277375ee:   4c 63 e0 0f 85 41 01 00 00 4c 89 c0 48 83 e0 fd
+0x00007f34277375fe:   48 8b 10 48 8b 05 30 08 3f 00 48 c1 ea 03 83 e2
+0x00007f342773760e:   0f 3b 10 0f 82 3a 01 00 00 4d 8b 7e 30 4e 8d 2c 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00000000f5625078 is an unknown value
+RCX=0x0000000000000028 is an unknown value
+RDX=0x00007f3427b3de20: <offset 0xcebe20> in /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/server/libjvm.so at 0x00007f3426e52000
+RSP=0x00007f34252f9c40 is an unknown value
+RBP=0x00007f34252f9ca0 is an unknown value
+RSI=0x00000000f5625078 is an unknown value
+RDI=0x0000000100ac13d8 is pointing into metadata
+R8 =0x0000000000000000 is an unknown value
+R9 =0x00007f3420077358 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x00007f3427b67d00: <offset 0xd15d00> in /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/server/libjvm.so at 0x00007f3426e52000
+R12=0x0000000000000005 is an unknown value
+R13=0x0000000000000001 is an unknown value
+R14=0x00007f34200772c0 is an unknown value
+R15=0x00007f3427b3de30: <offset 0xcebe30> in /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/server/libjvm.so at 0x00007f3426e52000
+
+
+Stack: [0x00007f34251fb000,0x00007f34252fb000],  sp=0x00007f34252f9c40,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x8e55fe]  oopDesc* PSPromotionManager::copy_to_survivor_space<false>(oopDesc*)+0x6e
+V  [libjvm.so+0x8e5060]  PSPromotionManager::drain_stacks_depth(bool)+0x6e0
+V  [libjvm.so+0x8e912a]  StealTask::do_it(GCTaskManager*, unsigned int)+0x18a
+V  [libjvm.so+0x5a4a22]  GCTaskThread::run()+0x162
+V  [libjvm.so+0x8760c2]  java_start(Thread*)+0xf2
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f33ac6b2000 JavaThread "jar transforms Thread 422" [_thread_blocked, id=18983, stack(0x00007f338bafb000,0x00007f338bbfc000)]
+  0x00007f33ac6b0800 JavaThread "jar transforms Thread 421" [_thread_blocked, id=18982, stack(0x00007f338bbfc000,0x00007f338bcfd000)]
+  0x00007f33ac6af000 JavaThread "jar transforms Thread 420" [_thread_blocked, id=18981, stack(0x00007f338bcfd000,0x00007f338bdfe000)]
+  0x00007f33ac6ae000 JavaThread "jar transforms Thread 419" [_thread_blocked, id=18980, stack(0x00007f338bdfe000,0x00007f338beff000)]
+  0x00007f33ac6ac800 JavaThread "jar transforms Thread 418" [_thread_blocked, id=18979, stack(0x00007f33900c3000,0x00007f33901c4000)]
+  0x00007f33ac6ab000 JavaThread "jar transforms Thread 417" [_thread_blocked, id=18978, stack(0x00007f33901c4000,0x00007f33902c5000)]
+  0x00007f33ac6a9800 JavaThread "jar transforms Thread 416" [_thread_blocked, id=18977, stack(0x00007f33903c6000,0x00007f33904c7000)]
+  0x00007f33ac6a8000 JavaThread "jar transforms Thread 415" [_thread_blocked, id=18976, stack(0x00007f33904c7000,0x00007f33905c8000)]
+  0x00007f33ac6a6800 JavaThread "jar transforms Thread 414" [_thread_blocked, id=18975, stack(0x00007f33905c8000,0x00007f33906c9000)]
+  0x00007f33ac6a5000 JavaThread "jar transforms Thread 413" [_thread_blocked, id=18974, stack(0x00007f33909cc000,0x00007f3390acd000)]
+  0x00007f33ac6a4000 JavaThread "jar transforms Thread 412" [_thread_blocked, id=18973, stack(0x00007f3390acd000,0x00007f3390bce000)]
+  0x00007f33ac6a2800 JavaThread "jar transforms Thread 411" [_thread_blocked, id=18972, stack(0x00007f3390bce000,0x00007f3390ccf000)]
+  0x00007f33ac6a1000 JavaThread "jar transforms Thread 410" [_thread_blocked, id=18971, stack(0x00007f3390dd0000,0x00007f3390ed1000)]
+  0x00007f33ac69f800 JavaThread "jar transforms Thread 409" [_thread_blocked, id=18970, stack(0x00007f3390ed1000,0x00007f3390fd2000)]
+  0x00007f33ac69e000 JavaThread "jar transforms Thread 408" [_thread_blocked, id=18969, stack(0x00007f33912d5000,0x00007f33913d6000)]
+  0x00007f33ac69c800 JavaThread "jar transforms Thread 407" [_thread_blocked, id=18968, stack(0x00007f33913d6000,0x00007f33914d7000)]
+  0x00007f33ac69b000 JavaThread "jar transforms Thread 406" [_thread_blocked, id=18967, stack(0x00007f33914d7000,0x00007f33915d8000)]
+  0x00007f33ac69a000 JavaThread "jar transforms Thread 405" [_thread_blocked, id=18966, stack(0x00007f33915d8000,0x00007f33916d9000)]
+  0x00007f33ac698000 JavaThread "jar transforms Thread 404" [_thread_blocked, id=18965, stack(0x00007f33918d1000,0x00007f33919d2000)]
+  0x00007f33ac696800 JavaThread "jar transforms Thread 403" [_thread_blocked, id=18964, stack(0x00007f33921e4000,0x00007f33922e5000)]
+  0x00007f33ac695000 JavaThread "jar transforms Thread 402" [_thread_blocked, id=18963, stack(0x00007f33922e5000,0x00007f33923e6000)]
+  0x00007f33ac694000 JavaThread "jar transforms Thread 401" [_thread_blocked, id=18962, stack(0x00007f33923e6000,0x00007f33924e7000)]
+  0x00007f33ac692800 JavaThread "jar transforms Thread 400" [_thread_blocked, id=18961, stack(0x00007f33925e8000,0x00007f33926e9000)]
+  0x00007f33ac691000 JavaThread "jar transforms Thread 399" [_thread_blocked, id=18960, stack(0x00007f33928eb000,0x00007f33929ec000)]
+  0x00007f33ac690000 JavaThread "jar transforms Thread 398" [_thread_blocked, id=18959, stack(0x00007f33929ec000,0x00007f3392aed000)]
+  0x00007f33ac68e800 JavaThread "jar transforms Thread 397" [_thread_blocked, id=18958, stack(0x00007f3392df0000,0x00007f3392ef1000)]
+  0x00007f33ac68d000 JavaThread "jar transforms Thread 396" [_thread_blocked, id=18957, stack(0x00007f33931f4000,0x00007f33932f5000)]
+  0x00007f33ac68b800 JavaThread "jar transforms Thread 395" [_thread_blocked, id=18956, stack(0x00007f33934f7000,0x00007f33935f8000)]
+  0x00007f33ac68a800 JavaThread "jar transforms Thread 394" [_thread_blocked, id=18955, stack(0x00007f33f0ea3000,0x00007f33f0fa4000)]
+  0x00007f33ac689000 JavaThread "Build operations Thread 4" [_thread_blocked, id=18953, stack(0x00007f33f16b4000,0x00007f33f17b5000)]
+  0x00007f33ac687800 JavaThread "Build operations Thread 3" [_thread_blocked, id=18952, stack(0x00007f33f1ec4000,0x00007f33f1fc5000)]
+  0x00007f33ac687000 JavaThread "Build operations Thread 2" [_thread_blocked, id=18951, stack(0x00007f3390fd2000,0x00007f33910d3000)]
+  0x00007f33ac67a800 JavaThread "Build operations" [_thread_blocked, id=18950, stack(0x00007f3392ff2000,0x00007f33930f3000)]
+  0x00007f33ac66f000 JavaThread "Cache worker for Build Output Cleanup Cache (/home/kaiser/Desktop/Organizer/.gradle/buildOutputCleanup)" [_thread_blocked, id=18949, stack(0x00007f33924e7000,0x00007f33925e8000)]
+  0x00007f33ac36d800 JavaThread "Cache worker for cache directory md-rule (/home/kaiser/.gradle/caches/6.5/md-rule)" [_thread_blocked, id=18945, stack(0x00007f33926e9000,0x00007f33927ea000)]
+  0x00007f33ac36d000 JavaThread "Cache worker for cache directory md-supplier (/home/kaiser/.gradle/caches/6.5/md-supplier)" [_thread_blocked, id=18944, stack(0x00007f338aaeb000,0x00007f338abec000)]
+  0x00007f33ac36c000 JavaThread "Cache worker for checksums cache (/home/kaiser/Desktop/Organizer/.gradle/checksums)" [_thread_blocked, id=18943, stack(0x00007f33932f5000,0x00007f33933f6000)]
+  0x00007f33ac046800 JavaThread "jar transforms Thread 393" [_thread_blocked, id=18940, stack(0x00007f3392bee000,0x00007f3392cef000)]
+  0x00007f33ac045000 JavaThread "jar transforms Thread 392" [_thread_blocked, id=18939, stack(0x00007f33920e3000,0x00007f33921e4000)]
+  0x00007f33ac044000 JavaThread "jar transforms Thread 391" [_thread_blocked, id=18938, stack(0x00007f33907ca000,0x00007f33908cb000)]
+  0x00007f33ac042800 JavaThread "jar transforms Thread 390" [_thread_blocked, id=18937, stack(0x00007f33935f8000,0x00007f33936f9000)]
+  0x00007f33ac041800 JavaThread "jar transforms Thread 389" [_thread_blocked, id=18936, stack(0x00007f33930f3000,0x00007f33931f4000)]
+  0x00007f33ac040800 JavaThread "jar transforms Thread 388" [_thread_blocked, id=18935, stack(0x00007f3390ccf000,0x00007f3390dd0000)]
+  0x00007f33ac03f000 JavaThread "jar transforms Thread 387" [_thread_blocked, id=18934, stack(0x00007f33906c9000,0x00007f33907ca000)]
+  0x00007f33ac03d800 JavaThread "jar transforms Thread 386" [_thread_blocked, id=18933, stack(0x00007f33933f6000,0x00007f33934f7000)]
+  0x00007f33ac03c000 JavaThread "jar transforms Thread 385" [_thread_blocked, id=18932, stack(0x00007f3389edf000,0x00007f3389fe0000)]
+  0x00007f33ac03b000 JavaThread "jar transforms Thread 384" [_thread_blocked, id=18931, stack(0x00007f338b2f3000,0x00007f338b3f4000)]
+  0x00007f33ac039800 JavaThread "jar transforms Thread 383" [_thread_blocked, id=18930, stack(0x00007f33f22bc000,0x00007f33f23bd000)]
+  0x00007f33ac038000 JavaThread "jar transforms Thread 382" [_thread_blocked, id=18929, stack(0x00007f338a1e2000,0x00007f338a2e3000)]
+  0x00007f33ac036800 JavaThread "jar transforms Thread 381" [_thread_blocked, id=18928, stack(0x00007f33f06a1000,0x00007f33f07a2000)]
+  0x00007f33ac035000 JavaThread "jar transforms Thread 380" [_thread_blocked, id=18927, stack(0x00007f33f009f000,0x00007f33f01a0000)]
+  0x00007f33ac034000 JavaThread "jar transforms Thread 379" [_thread_blocked, id=18926, stack(0x00007f33927ea000,0x00007f33928eb000)]
+  0x00007f33ac032800 JavaThread "jar transforms Thread 378" [_thread_blocked, id=18925, stack(0x00007f33f25bd000,0x00007f33f26be000)]
+  0x00007f33ac031000 JavaThread "jar transforms Thread 377" [_thread_blocked, id=18924, stack(0x00007f33916d9000,0x00007f33917da000)]
+  0x00007f33ac02f800 JavaThread "jar transforms Thread 376" [_thread_blocked, id=18923, stack(0x00007f33939fc000,0x00007f3393afd000)]
+  0x00007f33ac02e800 JavaThread "jar transforms Thread 375" [_thread_blocked, id=18922, stack(0x00007f338abec000,0x00007f338aced000)]
+  0x00007f33ac02d000 JavaThread "jar transforms Thread 374" [_thread_blocked, id=18921, stack(0x00007f338beff000,0x00007f338c000000)]
+  0x00007f33ac02c000 JavaThread "jar transforms Thread 373" [_thread_blocked, id=18920, stack(0x00007f3392cef000,0x00007f3392df0000)]
+  0x00007f33ac02a800 JavaThread "jar transforms Thread 372" [_thread_blocked, id=18919, stack(0x00007f33f15b3000,0x00007f33f16b4000)]
+  0x00007f33ac027000 JavaThread "jar transforms Thread 371" [_thread_blocked, id=18918, stack(0x00007f33911d4000,0x00007f33912d5000)]
+  0x00007f33ac026800 JavaThread "jar transforms Thread 370" [_thread_blocked, id=18917, stack(0x00007f33908cb000,0x00007f33909cc000)]
+  0x00007f33ac010000 JavaThread "jar transforms Thread 369" [_thread_blocked, id=18916, stack(0x00007f33910d3000,0x00007f33911d4000)]
+  0x00007f33ac011000 JavaThread "Cache worker for file hash cache (/home/kaiser/Desktop/Organizer/.gradle/6.5/fileHashes)" [_thread_blocked, id=18915, stack(0x00007f33f11a4000,0x00007f33f12a5000)]
+  0x00007f33ac00f800 JavaThread "Thread-531" [_thread_blocked, id=18914, stack(0x00007f338b0f1000,0x00007f338b1f2000)]
+  0x00007f33ac00e000 JavaThread "Stdin handler" [_thread_blocked, id=18912, stack(0x00007f3392ef1000,0x00007f3392ff2000)]
+  0x00007f33ac019800 JavaThread "Asynchronous log dispatcher for DefaultDaemonConnection: socket connection from /127.0.0.1:33989 to /127.0.0.1:45184" [_thread_blocked, id=18911, stack(0x00007f33936f9000,0x00007f33937fa000)]
+  0x00007f33c8009000 JavaThread "Daemon worker Thread 5" [_thread_blocked, id=18909, stack(0x00007f3392aed000,0x00007f3392bee000)]
+  0x00007f33c8004000 JavaThread "Cancel handler" [_thread_blocked, id=18908, stack(0x00007f33902c5000,0x00007f33903c6000)]
+  0x00007f33c8007000 JavaThread "Handler for socket connection from /127.0.0.1:33989 to /127.0.0.1:45184" [_thread_in_native, id=18907, stack(0x00007f338aff0000,0x00007f338b0f1000)]
+  0x00007f33d0064000 JavaThread "Daemon Thread 5" [_thread_blocked, id=18906, stack(0x00007f33f26be000,0x00007f33f27bf000)]
+  0x00007f33a405a000 JavaThread "Cache worker for Java compile cache (/home/kaiser/.gradle/caches/6.5/javaCompile)" [_thread_blocked, id=23469, stack(0x00007f3387077000,0x00007f3387178000)]
+  0x00007f33b5ac9800 JavaThread "Memory manager" [_thread_blocked, id=23443, stack(0x00007f33887bb000,0x00007f33888bc000)]
+  0x00007f33b5240000 JavaThread "Cache worker for file content cache (/home/kaiser/.gradle/caches/6.5/fileContent)" [_thread_blocked, id=23212, stack(0x00007f33f05a0000,0x00007f33f06a1000)]
+  0x00007f33b5071000 JavaThread "Cache worker for execution history cache (/home/kaiser/.gradle/caches/6.5/executionHistory)" [_thread_blocked, id=23159, stack(0x00007f33f0da2000,0x00007f33f0ea3000)]
+  0x00007f33b421a000 JavaThread "Cache worker for file hash cache (/home/kaiser/.gradle/caches/6.5/fileHashes)" [_thread_blocked, id=23153, stack(0x00007f33f19b5000,0x00007f33f1ab6000)]
+  0x00007f33b4186800 JavaThread "File lock request listener" [_thread_in_native, id=23152, stack(0x00007f33f1ab6000,0x00007f33f1bb7000)]
+  0x00007f33b417e800 JavaThread "Cache worker for journal cache (/home/kaiser/.gradle/caches/journal-1)" [_thread_blocked, id=23151, stack(0x00007f33f1bb7000,0x00007f33f1cb8000)]
+  0x00007f342133a000 JavaThread "Daemon periodic checks" [_thread_blocked, id=23141, stack(0x00007f33f27bf000,0x00007f33f28c0000)]
+  0x00007f3421319000 JavaThread "Incoming local TCP Connector on port 33989" [_thread_in_native, id=23140, stack(0x00007f33f28c7000,0x00007f33f29c8000)]
+  0x00007f34212b8800 JavaThread "Daemon health stats" [_thread_blocked, id=23139, stack(0x00007f33f2bcd000,0x00007f33f2cce000)]
+  0x00007f34200d4000 JavaThread "Service Thread" daemon [_thread_blocked, id=23135, stack(0x00007f33f381d000,0x00007f33f391e000)]
+  0x00007f34200bf000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=23134, stack(0x00007f33f391f000,0x00007f33f3a1f000)]
+  0x00007f34200bd000 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=23133, stack(0x00007f33f3a20000,0x00007f33f3b20000)]
+  0x00007f34200ba800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=23132, stack(0x00007f33f3b21000,0x00007f33f3c21000)]
+  0x00007f34200b8000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=23131, stack(0x00007f33f3c21000,0x00007f33f3d22000)]
+  0x00007f3420088000 JavaThread "Finalizer" daemon [_thread_blocked, id=23130, stack(0x00007f341004c000,0x00007f341014d000)]
+  0x00007f3420083800 JavaThread "Reference Handler" daemon [_thread_blocked, id=23129, stack(0x00007f341014d000,0x00007f341024e000)]
+  0x00007f342000c000 JavaThread "main" [_thread_blocked, id=23123, stack(0x00007f3428486000,0x00007f3428586000)]
+
+Other Threads:
+  0x00007f342007a000 VMThread [stack: 0x00007f341024f000,0x00007f341034f000] [id=23128]
+  0x00007f34200d7000 WatcherThread [stack: 0x00007f33f371d000,0x00007f33f381d000] [id=23136]
+
+=>0x00007f3420026800 (exited) GCTaskThread [stack: 0x00007f34251fb000,0x00007f34252fb000] [id=23127]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007f3420008760] Threads_lock - owner thread: 0x00007f342007a000
+[0x00007f3420008c60] Heap_lock - owner thread: 0x00007f33ac6a8000
+
+heap address: 0x0000000080000000, size: 2048 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 581120K, used 581098K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 463360K, 100% used [0x00000000d5580000,0x00000000f1a00000,0x00000000f1a00000)
+  from space 117760K, 99% used [0x00000000f1a00000,0x00000000f8cfab80,0x00000000f8d00000)
+  to   space 117760K, 3% used [0x00000000f8d00000,0x00000000f9120000,0x0000000100000000)
+ ParOldGen       total 388608K, used 263109K [0x0000000080000000, 0x0000000097b80000, 0x00000000d5580000)
+  object space 388608K, 67% used [0x0000000080000000,0x00000000900f36d8,0x0000000097b80000)
+ Metaspace       used 94855K, capacity 100534K, committed 100760K, reserved 1136640K
+  class space    used 12426K, capacity 13416K, committed 13488K, reserved 1048576K
+
+Card table byte_map: [0x00007f34258a9000,0x00007f3425caa000] byte_map_base: 0x00007f34254a9000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f3427b677e0
+ Begin Bits: [0x00007f3400000000, 0x00007f3402000000)
+ End Bits:   [0x00007f3402000000, 0x00007f3404000000)
+
+Polling page: 0x00007f34285be000
+
+CodeCache: size=245760Kb used=52709Kb max_used=52711Kb free=193050Kb
+ bounds [0x00007f3411000000, 0x00007f34143d0000, 0x00007f3420000000]
+ total_blobs=16994 nmethods=16126 adapters=781
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 15978.302 Thread 0x00007f34200bf000 20581       3       org.gradle.api.internal.artifacts.ivyservice.ivyresolve.strategy.VersionParser$$Lambda$178/885161663::apply (12 bytes)
+Event: 15978.302 Thread 0x00007f34200bf000 nmethod 20581 0x00007f34143c0450 code [0x00007f34143c05c0, 0x00007f34143c0848]
+Event: 15978.353 Thread 0x00007f34200bf000 20582       1       org.gradle.api.internal.artifacts.ivyservice.resolveengine.oldresult.ResolutionFailureCollector::visitEdges (1 bytes)
+Event: 15978.353 Thread 0x00007f34200bf000 nmethod 20582 0x00007f34143c5850 code [0x00007f34143c59a0, 0x00007f34143c5ab0]
+Event: 15978.386 Thread 0x00007f34200bf000 20587       3       org.gradle.tooling.internal.provider.runner.SubtreeFilteringBuildOperationListener::started (118 bytes)
+Event: 15978.387 Thread 0x00007f34200bf000 nmethod 20587 0x00007f34143c3f90 code [0x00007f34143c4200, 0x00007f34143c52c8]
+Event: 15978.400 Thread 0x00007f34200bf000 20588       3       org.gradle.tooling.internal.provider.runner.SubtreeFilteringBuildOperationListener::finished (72 bytes)
+Event: 15978.401 Thread 0x00007f34200bf000 nmethod 20588 0x00007f34143c9950 code [0x00007f34143c9b80, 0x00007f34143ca908]
+Event: 15978.451 Thread 0x00007f34200bf000 20589   !   3       org.gradle.internal.classpath.DefaultCachedClasspathTransformer$TransformFile::lambda$schedule$0 (52 bytes)
+Event: 15978.452 Thread 0x00007f34200bf000 nmethod 20589 0x00007f34143c3850 code [0x00007f34143c3a00, 0x00007f34143c3d58]
+
+GC Heap History (10 events):
+Event: 5258.393 GC heap after
+Heap after GC invocations=17 (full 4):
+ PSYoungGen      total 612352K, used 81890K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 530432K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000f5b80000)
+  from space 81920K, 99% used [0x00000000f5b80000,0x00000000fab78bf0,0x00000000fab80000)
+  to   space 86528K, 0% used [0x00000000fab80000,0x00000000fab80000,0x0000000100000000)
+ ParOldGen       total 388608K, used 169934K [0x0000000080000000, 0x0000000097b80000, 0x00000000d5580000)
+  object space 388608K, 43% used [0x0000000080000000,0x000000008a5f3a20,0x0000000097b80000)
+ Metaspace       used 91529K, capacity 96186K, committed 96408K, reserved 1132544K
+  class space    used 12092K, capacity 12961K, committed 12976K, reserved 1048576K
+}
+Event: 5284.558 GC heap before
+{Heap before GC invocations=18 (full 4):
+ PSYoungGen      total 612352K, used 612322K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 530432K, 100% used [0x00000000d5580000,0x00000000f5b80000,0x00000000f5b80000)
+  from space 81920K, 99% used [0x00000000f5b80000,0x00000000fab78bf0,0x00000000fab80000)
+  to   space 86528K, 0% used [0x00000000fab80000,0x00000000fab80000,0x0000000100000000)
+ ParOldGen       total 388608K, used 169934K [0x0000000080000000, 0x0000000097b80000, 0x00000000d5580000)
+  object space 388608K, 43% used [0x0000000080000000,0x000000008a5f3a20,0x0000000097b80000)
+ Metaspace       used 92267K, capacity 97042K, committed 97304K, reserved 1134592K
+  class space    used 12142K, capacity 13043K, committed 13104K, reserved 1048576K
+Event: 5284.595 GC heap after
+Heap after GC invocations=18 (full 4):
+ PSYoungGen      total 599040K, used 25564K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 512512K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000f4a00000)
+  from space 86528K, 29% used [0x00000000fab80000,0x00000000fc4773b8,0x0000000100000000)
+  to   space 93184K, 0% used [0x00000000f4a00000,0x00000000f4a00000,0x00000000fa500000)
+ ParOldGen       total 388608K, used 181460K [0x0000000080000000, 0x0000000097b80000, 0x00000000d5580000)
+  object space 388608K, 46% used [0x0000000080000000,0x000000008b135120,0x0000000097b80000)
+ Metaspace       used 92267K, capacity 97042K, committed 97304K, reserved 1134592K
+  class space    used 12142K, capacity 13043K, committed 13104K, reserved 1048576K
+}
+Event: 6275.799 GC heap before
+{Heap before GC invocations=19 (full 4):
+ PSYoungGen      total 599040K, used 538076K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 512512K, 100% used [0x00000000d5580000,0x00000000f4a00000,0x00000000f4a00000)
+  from space 86528K, 29% used [0x00000000fab80000,0x00000000fc4773b8,0x0000000100000000)
+  to   space 93184K, 0% used [0x00000000f4a00000,0x00000000f4a00000,0x00000000fa500000)
+ ParOldGen       total 388608K, used 181460K [0x0000000080000000, 0x0000000097b80000, 0x00000000d5580000)
+  object space 388608K, 46% used [0x0000000080000000,0x000000008b135120,0x0000000097b80000)
+ Metaspace       used 92563K, capacity 97478K, committed 97560K, reserved 1134592K
+  class space    used 12151K, capacity 13059K, committed 13104K, reserved 1048576K
+Event: 6275.809 GC heap after
+Heap after GC invocations=19 (full 4):
+ PSYoungGen      total 605696K, used 17037K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 512512K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000f4a00000)
+  from space 93184K, 18% used [0x00000000f4a00000,0x00000000f5aa34c0,0x00000000fa500000)
+  to   space 90624K, 0% used [0x00000000fa780000,0x00000000fa780000,0x0000000100000000)
+ ParOldGen       total 388608K, used 181468K [0x0000000080000000, 0x0000000097b80000, 0x00000000d5580000)
+  object space 388608K, 46% used [0x0000000080000000,0x000000008b137120,0x0000000097b80000)
+ Metaspace       used 92563K, capacity 97478K, committed 97560K, reserved 1134592K
+  class space    used 12151K, capacity 13059K, committed 13104K, reserved 1048576K
+}
+Event: 6278.272 GC heap before
+{Heap before GC invocations=20 (full 4):
+ PSYoungGen      total 605696K, used 529549K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 512512K, 100% used [0x00000000d5580000,0x00000000f4a00000,0x00000000f4a00000)
+  from space 93184K, 18% used [0x00000000f4a00000,0x00000000f5aa34c0,0x00000000fa500000)
+  to   space 90624K, 0% used [0x00000000fa780000,0x00000000fa780000,0x0000000100000000)
+ ParOldGen       total 388608K, used 181468K [0x0000000080000000, 0x0000000097b80000, 0x00000000d5580000)
+  object space 388608K, 46% used [0x0000000080000000,0x000000008b137120,0x0000000097b80000)
+ Metaspace       used 92863K, capacity 97822K, committed 98072K, reserved 1134592K
+  class space    used 12159K, capacity 13071K, committed 13104K, reserved 1048576K
+Event: 6278.405 GC heap after
+Heap after GC invocations=20 (full 4):
+ PSYoungGen      total 553984K, used 90615K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 463360K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000f1a00000)
+  from space 90624K, 99% used [0x00000000fa780000,0x00000000ffffdc78,0x0000000100000000)
+  to   space 117760K, 0% used [0x00000000f1a00000,0x00000000f1a00000,0x00000000f8d00000)
+ ParOldGen       total 388608K, used 213865K [0x0000000080000000, 0x0000000097b80000, 0x00000000d5580000)
+  object space 388608K, 55% used [0x0000000080000000,0x000000008d0da788,0x0000000097b80000)
+ Metaspace       used 92863K, capacity 97822K, committed 98072K, reserved 1134592K
+  class space    used 12159K, capacity 13071K, committed 13104K, reserved 1048576K
+}
+Event: 6302.949 GC heap before
+{Heap before GC invocations=21 (full 4):
+ PSYoungGen      total 553984K, used 553975K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 463360K, 100% used [0x00000000d5580000,0x00000000f1a00000,0x00000000f1a00000)
+  from space 90624K, 99% used [0x00000000fa780000,0x00000000ffffdc78,0x0000000100000000)
+  to   space 117760K, 0% used [0x00000000f1a00000,0x00000000f1a00000,0x00000000f8d00000)
+ ParOldGen       total 388608K, used 213865K [0x0000000080000000, 0x0000000097b80000, 0x00000000d5580000)
+  object space 388608K, 55% used [0x0000000080000000,0x000000008d0da788,0x0000000097b80000)
+ Metaspace       used 93292K, capacity 98468K, committed 98712K, reserved 1134592K
+  class space    used 12197K, capacity 13142K, committed 13232K, reserved 1048576K
+Event: 6303.086 GC heap after
+Heap after GC invocations=21 (full 4):
+ PSYoungGen      total 581120K, used 117738K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 463360K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000f1a00000)
+  from space 117760K, 99% used [0x00000000f1a00000,0x00000000f8cfab80,0x00000000f8d00000)
+  to   space 117760K, 0% used [0x00000000f8d00000,0x00000000f8d00000,0x0000000100000000)
+ ParOldGen       total 388608K, used 228146K [0x0000000080000000, 0x0000000097b80000, 0x00000000d5580000)
+  object space 388608K, 58% used [0x0000000080000000,0x000000008decc818,0x0000000097b80000)
+ Metaspace       used 93292K, capacity 98468K, committed 98712K, reserved 1134592K
+  class space    used 12197K, capacity 13142K, committed 13232K, reserved 1048576K
+}
+Event: 15978.636 GC heap before
+{Heap before GC invocations=22 (full 4):
+ PSYoungGen      total 581120K, used 581098K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 463360K, 100% used [0x00000000d5580000,0x00000000f1a00000,0x00000000f1a00000)
+  from space 117760K, 99% used [0x00000000f1a00000,0x00000000f8cfab80,0x00000000f8d00000)
+  to   space 117760K, 0% used [0x00000000f8d00000,0x00000000f8d00000,0x0000000100000000)
+ ParOldGen       total 388608K, used 228146K [0x0000000080000000, 0x0000000097b80000, 0x00000000d5580000)
+  object space 388608K, 58% used [0x0000000080000000,0x000000008decc818,0x0000000097b80000)
+ Metaspace       used 94855K, capacity 100534K, committed 100760K, reserved 1136640K
+  class space    used 12426K, capacity 13416K, committed 13488K, reserved 1048576K
+
+Deoptimization events (10 events):
+Event: 15978.010 Thread 0x00007f33c8009000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f34129b51b4 method=com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(Ljava/lang/Object;ILcom/google/common/cache/CacheLoader;)Ljava/lang/Object; @ 79
+Event: 15978.010 Thread 0x00007f33c8009000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f3413e68bbc method=com.google.common.cache.LocalCache$Segment.expand()V @ 80
+Event: 15978.018 Thread 0x00007f33c8009000 Uncommon trap: reason=unloaded action=reinterpret pc=0x00007f3412637edc method=org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess.incrementLockCount()V @ 109
+Event: 15978.021 Thread 0x00007f33c8009000 Uncommon trap: reason=speculate_class_check action=maybe_recompile pc=0x00007f341335f7e8 method=java.nio.charset.CharsetEncoder.encode(Ljava/nio/CharBuffer;Ljava/nio/ByteBuffer;Z)Ljava/nio/charset/CoderResult; @ 57
+Event: 15978.038 Thread 0x00007f33c8009000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f34136d8e88 method=org.gradle.tooling.internal.provider.runner.SubtreeFilteringBuildOperationListener.started(Lorg/gradle/internal/operations/BuildOperationDescriptor;Lorg/gradle/internal/oper
+Event: 15978.039 Thread 0x00007f33c8009000 Uncommon trap: reason=array_check action=maybe_recompile pc=0x00007f341436582c method=java.util.ComparableTimSort.mergeHi(IIII)V @ 101
+Event: 15978.039 Thread 0x00007f33c8009000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f34115489a8 method=org.codehaus.groovy.runtime.metaclass.MetaMethodIndex.addMethodToList(Ljava/lang/Object;Lgroovy/lang/MetaMethod;)Ljava/lang/Object; @ 96
+Event: 15978.040 Thread 0x00007f33c8009000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f34115488c4 method=org.codehaus.groovy.runtime.metaclass.MetaMethodIndex.isNonRealMethod(Lgroovy/lang/MetaMethod;)Z @ 4
+Event: 15978.076 Thread 0x00007f33c8009000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f3411de9e4c method=java.lang.ClassLoader.checkCerts(Ljava/lang/String;Ljava/security/CodeSource;)V @ 29
+Event: 15978.106 Thread 0x00007f33c8009000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f3412fdfa54 method=org.gradle.tooling.internal.provider.runner.SubtreeFilteringBuildOperationListener.finished(Lorg/gradle/internal/operations/BuildOperationDescriptor;Lorg/gradle/internal/ope
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 15978.082 Thread 0x00007f33c8009000 Exception <a 'java/lang/ClassNotFoundException': java/util/ArrayListBeanInfo> (0x00000000f0cd7330) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 15978.082 Thread 0x00007f33c8009000 Exception <a 'java/lang/ClassNotFoundException': java/util/AbstractListBeanInfo> (0x00000000f0ce1580) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 15978.082 Thread 0x00007f33c8009000 Exception <a 'java/lang/ClassNotFoundException': java/util/AbstractListCustomizer> (0x00000000f0cebd40) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 15978.083 Thread 0x00007f33c8009000 Exception <a 'java/lang/ClassNotFoundException': java/util/ArrayListCustomizer> (0x00000000f0d03230) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 15978.095 Thread 0x00007f33c8009000 Exception <a 'java/lang/ClassNotFoundException': java/util/CollectionBeanInfo> (0x00000000f0d89058) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 15978.095 Thread 0x00007f33c8009000 Exception <a 'java/lang/ClassNotFoundException': java/util/CollectionCustomizer> (0x00000000f0d93228) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 15978.138 Thread 0x00007f33ac031000 Exception <a 'sun/nio/fs/UnixException'> (0x00000000f0ed4ad0) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/prims/jni.cpp, line 710]
+Event: 15978.138 Thread 0x00007f33ac031000 Exception <a 'sun/nio/fs/UnixException'> (0x00000000f0ed4d60) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/prims/jni.cpp, line 710]
+Event: 15978.146 Thread 0x00007f33c8009000 Exception <a 'java/lang/ClassNotFoundException': build_acm3szyy47v7cah7ek58ebyr4BeanInfo> (0x00000000f0f7bcb0) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 15978.146 Thread 0x00007f33c8009000 Exception <a 'java/lang/ClassNotFoundException': build_acm3szyy47v7cah7ek58ebyr4Customizer> (0x00000000f0f87940) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+
+Events (10 events):
+Event: 15978.577 Thread 0x00007f33ac6a6800 Thread added: 0x00007f33ac6a6800
+Event: 15978.584 Thread 0x00007f33ac6a8000 Thread added: 0x00007f33ac6a8000
+Event: 15978.588 Executing VM operation: ParallelGCFailedAllocation
+Event: 15978.591 Thread 0x00007f33ac6a9800 Thread added: 0x00007f33ac6a9800
+Event: 15978.597 Thread 0x00007f33ac6ab000 Thread added: 0x00007f33ac6ab000
+Event: 15978.604 Thread 0x00007f33ac6ac800 Thread added: 0x00007f33ac6ac800
+Event: 15978.611 Thread 0x00007f33ac6ae000 Thread added: 0x00007f33ac6ae000
+Event: 15978.624 Thread 0x00007f33ac6af000 Thread added: 0x00007f33ac6af000
+Event: 15978.624 Thread 0x00007f33ac6b0800 Thread added: 0x00007f33ac6b0800
+Event: 15978.632 Thread 0x00007f33ac6b2000 Thread added: 0x00007f33ac6b2000
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:01 5773943                            /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/bin/java
+00401000-00402000 r--p 00000000 08:01 5773943                            /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/bin/java
+00402000-00403000 rw-p 00001000 08:01 5773943                            /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/bin/java
+016e6000-020cd000 rw-p 00000000 00:00 0                                  [heap]
+80000000-97b80000 rw-p 00000000 00:00 0 
+97b80000-d5580000 ---p 00000000 00:00 0 
+d5580000-100000000 rw-p 00000000 00:00 0 
+100000000-100d2c000 rw-p 00000000 00:00 0 
+100d2c000-140000000 ---p 00000000 00:00 0 
+7f33838b8000-7f3383ab8000 rw-p 00000000 00:00 0 
+7f3383ab8000-7f3383cb8000 rw-p 00000000 00:00 0 
+7f3383cb8000-7f338461d000 rw-p 00000000 00:00 0 
+7f3384b80000-7f3384d80000 rw-p 00000000 00:00 0 
+7f3384f82000-7f3385182000 rw-p 00000000 00:00 0 
+7f3385283000-7f3385d6b000 rw-p 00000000 00:00 0 
+7f3385d6b000-7f3385f6b000 rw-p 00000000 00:00 0 
+7f3385f6b000-7f338616b000 rw-p 00000000 00:00 0 
+7f338616b000-7f338636b000 rw-p 00000000 00:00 0 
+7f3386b76000-7f3386d76000 rw-p 00000000 00:00 0 
+7f3386d76000-7f3386f76000 rw-p 00000000 00:00 0 
+7f3387077000-7f338707a000 ---p 00000000 00:00 0 
+7f338707a000-7f3387378000 rw-p 00000000 00:00 0 
+7f33876b6000-7f33878b6000 rw-p 00000000 00:00 0 
+7f33878b6000-7f3387ab6000 rw-p 00000000 00:00 0 
+7f3387ab6000-7f3387cb6000 rw-p 00000000 00:00 0 
+7f3387cb6000-7f3387eb6000 rw-p 00000000 00:00 0 
+7f33882ba000-7f33884ba000 rw-p 00000000 00:00 0 
+7f33884ba000-7f33886ba000 rw-p 00000000 00:00 0 
+7f33887bb000-7f33887be000 ---p 00000000 00:00 0 
+7f33887be000-7f3388ab8000 rw-p 00000000 00:00 0 
+7f3388ab8000-7f3388abc000 ---p 00000000 00:00 0 
+7f3388abc000-7f3388cbc000 rw-p 00000000 00:00 0 
+7f3388cbc000-7f3388cbd000 r--s 00006000 08:01 8657465                    /home/kaiser/.gradle/caches/jars-8/da00a14ad1fba2e6c1eefc53c221b6a1/proj.jar
+7f3388cbd000-7f3388ebd000 rw-p 00000000 00:00 0 
+7f3388ebd000-7f33890bd000 rw-p 00000000 00:00 0 
+7f33890bd000-7f33892bd000 rw-p 00000000 00:00 0 
+7f33892bd000-7f33892bf000 r--s 00016000 08:01 3943381                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/jce.jar
+7f33892bf000-7f33894bf000 rw-p 00000000 00:00 0 
+7f33894bf000-7f33896bf000 rw-p 00000000 00:00 0 
+7f33896bf000-7f33898bf000 rw-p 00000000 00:00 0 
+7f33899c0000-7f3389bc0000 rw-p 00000000 00:00 0 
+7f3389bc0000-7f3389bc1000 r--s 00001000 08:01 8655632                    /home/kaiser/.gradle/caches/jars-8/2d4b75f4eab6839eeeb19ab6b5720f30/cp_proj.jar
+7f3389bc1000-7f3389bc4000 r--s 00011000 08:01 8653955                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.sun.activation/javax.activation/1.2.0/bf744c1e2776ed1de3c55c8dac1057ec331ef744/javax.activation-1.2.0.jar
+7f3389bc4000-7f3389bcc000 r--s 00024000 08:01 8653961                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.72/6ca8bee3d88957eaaaef077c41c908c9940492d8/kotlin-stdlib-common-1.3.72.jar
+7f3389bcc000-7f3389bce000 r--s 0000c000 08:01 8653954                    /home/kaiser/.gradle/caches/modules-2/files-2.1/javax.activation/javax.activation-api/1.2.0/85262acf3ca9816f9537ca47d5adeabaead7cb16/javax.activation-api-1.2.0.jar
+7f3389bce000-7f3389bd4000 r--s 00047000 08:01 8653953                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.sun.xml.fastinfoset/FastInfoset/1.2.15/bb7b7ec0379982b97c62cd17465cb6d9155f68e8/FastInfoset-1.2.15.jar
+7f3389bd4000-7f3389bd5000 r--s 00008000 08:01 8653952                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.jvnet.staxex/stax-ex/1.8/8cc35f73da321c29973191f2cf143d29d26a1df7/stax-ex-1.8.jar
+7f3389bd5000-7f3389bd7000 r--s 00005000 08:01 8653951                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/3.0.7/c197c86ceec7318b1284bffb49b54226ca774003/istack-commons-runtime-3.0.7.jar
+7f3389bd7000-7f3389bda000 r--s 0000f000 08:01 8653950                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/2.3.1/a09d2c48d3285f206fafbffe0e50619284e92126/txw2-2.3.1.jar
+7f3389bda000-7f3389bde000 r--s 0001c000 08:01 8653949                    /home/kaiser/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.3.1/8531ad5ac454cc2deb9d4d32c40c4d7451939b5d/jaxb-api-2.3.1.jar
+7f3389bde000-7f3389be5000 r--s 0003f000 08:01 8653947                    /home/kaiser/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/4b95f4897fa13f2cd904aee711aeafc0c5295cd8/commons-codec-1.10.jar
+7f3389be5000-7f3389be7000 r--s 0000e000 08:01 8653945                    /home/kaiser/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar
+7f3389be7000-7f3389be8000 r--s 00000000 08:01 8653960                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.18/f7aa683ea79dc6681ee9fb95756c999acbb62f5d/animal-sniffer-annotations-1.18.jar
+7f3389be8000-7f3389bea000 r--s 00001000 08:01 8653959                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.3/ba035118bc8bac37d7eff77700720999acd9986d/j2objc-annotations-1.3.jar
+7f3389bea000-7f3389beb000 r--s 00000000 08:01 8653958                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+7f3389beb000-7f3389bed000 r--s 00000000 08:01 8653957                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar
+7f3389bed000-7f3389bef000 r--s 00003000 08:01 8653944                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar
+7f3389bef000-7f3389bf1000 r--s 00003000 08:01 8653962                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar
+7f3389bf1000-7f3389bf2000 r--s 0000a000 08:01 8653567                    /home/kaiser/.gradle/caches/modules-2/files-2.1/net.sf.kxml/kxml2/2.3.0/ccbc77a5fd907ef863c29f3596c6f54ffa4e9442/kxml2-2.3.0.jar
+7f3389bf2000-7f3389bfd000 r--s 00081000 08:01 8653943                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.jetbrains.trove4j/trove4j/20160824/33c3e174a9c8368d93761d3d12712db18e903959/trove4j-20160824.jar
+7f3389bfd000-7f3389c06000 r--s 00064000 08:01 8653940                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.12/84caa68576e345eb5e7ae61a0e5a9229eb100d7b/commons-compress-1.12.jar
+7f3389c06000-7f3389c10000 r--s 00027000 08:01 8653963                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/2.8.1/eb2e8ab75598548cc8acf9a1ca227e480e01881e/checker-qual-2.8.1.jar
+7f3389c10000-7f3389c11000 r--s 0000f000 08:01 8653937                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.json/json/20180813/8566b2b0391d9d4479ea225645c6ed47ef17fe41/json-20180813.jar
+7f3389c11000-7f3389c17000 r--s 00045000 08:01 8653936                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar
+7f3389c17000-7f3389c19000 r--s 00002000 08:01 8653964                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.3.2/d1a0c5032570e0f64be6b4d9c90cdeb103129029/error_prone_annotations-2.3.2.jar
+7f3389c19000-7f3389c1a000 r--s 00001000 08:01 8653935                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.6.2/ed193d86e0af90cc2342aedbe73c5d86b03fa09b/auto-value-annotations-1.6.2.jar
+7f3389c1a000-7f3389c2f000 r--s 00123000 08:01 8653934                    /home/kaiser/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-base/6.0.3/7135739d2d3834964c543ed21e2936ce34747aca/proguard-base-6.0.3.jar
+7f3389c2f000-7f3389c43000 r--s 0013d000 08:01 8653932                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.72/8032138f12c0180bc4e51fe139d4c52b46db6109/kotlin-stdlib-1.3.72.jar
+7f3389c43000-7f3389c44000 r--s 00000000 08:01 8653933                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.72/3adfc2f4ea4243e01204be8081fe63bde6b12815/kotlin-stdlib-jdk7-1.3.72.jar
+7f3389c44000-7f3389c58000 r--s 000f7000 08:01 8653931                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/jaxb-runtime-2.3.1.jar
+7f3389c58000-7f3389c5d000 r--s 00036000 08:01 8653929                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.5/f645ed69d595b24d4cf8b3fbb64cc505bede8829/gson-2.8.5.jar
+7f3389c5d000-7f3389c60000 r--s 00033000 08:01 8653552                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.googlecode.juniversalchardet/juniversalchardet/1.0.3/cd49678784c46aa8789c060538e0154013bb421b/juniversalchardet-1.0.3.jar
+7f3389c60000-7f3389c64000 r--s 0002a000 08:01 8653551                    /home/kaiser/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/b1b6ea3b7e4aa4f492509a4952029cd8e48019ad/commons-io-2.4.jar
+7f3389c64000-7f3389c7b000 r--s 00154000 08:01 8653928                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4/4.5.3/f35db7e4b2446e4174ba6a73db7bd6b3e6bb5da1/antlr4-4.5.3.jar
+7f3389c7b000-7f3389c7c000 r--s 00003000 08:01 8653927                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.databinding/baseLibrary/4.1.0/2697e7689bbde7051db61cb6baeaf307975090db/baseLibrary-4.1.0.jar
+7f3389c7c000-7f3389c7d000 r--s 00003000 08:01 8653925                    /home/kaiser/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-common/4.1.0/e0c4fa410ea245a70a9dbd140a164d50b10e55fe/databinding-common-4.1.0.jar
+7f3389c7d000-7f3389cb7000 r--s 00284000 08:01 8653916                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.3.72/86613e1a669a701b0c660bfd2af4f82a7ae11fca/kotlin-reflect-1.3.72.jar
+7f3389cb7000-7f3389cbe000 r--s 00049000 08:01 8653912                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.10/acc54d9b28bdffe4bbde89ed2e4a1e86b5285e2b/httpcore-4.4.10.jar
+7f3389cbe000-7f3389ccb000 r--s 000af000 08:01 8653914                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.6/1afe5621985efe90a92d0fbc9be86271efbe796f/httpclient-4.5.6.jar
+7f3389ccb000-7f3389ccd000 r--s 00009000 08:01 8653909                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.6/164343da11db817e81e24e0d9869527e069850c9/httpmime-4.5.6.jar
+7f3389ccd000-7f3389cce000 r--s 00002000 08:01 8653895                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/27.1.0/c5e76d6e7078808655107373703dda7c58fec517/annotations-27.1.0.jar
+7f3389cce000-7f3389d00000 r--s 00270000 08:01 8653878                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/28.1-jre/b0e91dcb6a44ffb6221b5027e12a5cb34b841145/guava-28.1-jre.jar
+7f3389d00000-7f3389d04000 r--s 0002f000 08:01 8653956                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.google.jimfs/jimfs/1.1/8fbd0579dc68aba6186935cc1bee21d2f3e7ec1c/jimfs-1.1.jar
+7f3389d04000-7f3389d05000 r--s 00003000 08:01 8653854                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.googlecode.json-simple/json-simple/1.1/5e303a03d04e6788dddfa3655272580ae0fc13bb/json-simple-1.1.jar
+7f3389d05000-7f3389e2a000 r--s 00f5d000 08:01 8653853                    /home/kaiser/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/7.2.0/5ad3a2bb04143f70aa0765fc29fc29571a7d6b34/fastutil-7.2.0.jar
+7f3389e2a000-7f3389e2b000 r--s 00000000 08:01 8653852                    /home/kaiser/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar
+7f3389e2b000-7f3389e76000 r--s 002ff000 08:01 8653849                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.56/a153c6f9744a3e9dd6feab5e210e1c9861362ec7/bcprov-jdk15on-1.56.jar
+7f3389e76000-7f3389e87000 r--s 00097000 08:01 8653848                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.56/4648af70268b6fdb24674fb1fd7c1fcc73db1231/bcpkix-jdk15on-1.56.jar
+7f3389e87000-7f3389e89000 r--s 00002000 08:01 8653542                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.5.0/81241ff7078ef14f42ea2a8995fa09c096256e6b/javawriter-2.5.0.jar
+7f3389e89000-7f3389e90000 r--s 0005a000 08:01 8653845                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apksig/4.1.0/65068a3496ad4f7a2f2ef53fb4af3f1fcd6448ff/apksig-4.1.0.jar
+7f3389e90000-7f3389e98000 r--s 0004b000 08:01 8653739                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.tensorflow/tensorflow-lite-metadata/0.1.0-rc1/f6e561e9053f2e9a2779d2ce1dffd45ce4dc3c74/tensorflow-lite-metadata-0.1.0-rc1.jar
+7f3389e98000-7f3389ea3000 r--s 000cc000 08:01 8653736                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.google.test.platform/core-proto/0.0.2-dev/56452fc5ddd0dc8e0e2f56b86910d97373a4b75c/core-proto-0.0.2-dev.jar
+7f3389ea3000-7f3389eb5000 r--s 00185000 08:01 8653733                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.10.0/410b61dd0088aab4caa05739558d43df248958c9/protobuf-java-3.10.0.jar
+7f3389eb5000-7f3389edf000 r--s 0039b000 08:01 8653843                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/protos/27.1.0/b2ea7accb70541360fc44eb953dec4a35e0ffc8f/protos-27.1.0.jar
+7f3389edf000-7f3389ee2000 ---p 00000000 00:00 0 
+7f3389ee2000-7f3389fe0000 rw-p 00000000 00:00 0 
+7f338a1e2000-7f338a1e5000 ---p 00000000 00:00 0 
+7f338a1e5000-7f338a2e3000 rw-p 00000000 00:00 0 
+7f338aaeb000-7f338aaee000 ---p 00000000 00:00 0 
+7f338aaee000-7f338abec000 rw-p 00000000 00:00 0 
+7f338abec000-7f338abef000 ---p 00000000 00:00 0 
+7f338abef000-7f338aced000 rw-p 00000000 00:00 0 
+7f338aff0000-7f338aff3000 ---p 00000000 00:00 0 
+7f338aff3000-7f338b0f1000 rw-p 00000000 00:00 0 
+7f338b0f1000-7f338b0f4000 ---p 00000000 00:00 0 
+7f338b0f4000-7f338b1f2000 rw-p 00000000 00:00 0 
+7f338b2f3000-7f338b2f6000 ---p 00000000 00:00 0 
+7f338b2f6000-7f338b3f4000 rw-p 00000000 00:00 0 
+7f338bafb000-7f338bafe000 ---p 00000000 00:00 0 
+7f338bafe000-7f338bbfc000 rw-p 00000000 00:00 0 
+7f338bbfc000-7f338bbff000 ---p 00000000 00:00 0 
+7f338bbff000-7f338bcfd000 rw-p 00000000 00:00 0 
+7f338bcfd000-7f338bd00000 ---p 00000000 00:00 0 
+7f338bd00000-7f338bdfe000 rw-p 00000000 00:00 0 
+7f338bdfe000-7f338be01000 ---p 00000000 00:00 0 
+7f338be01000-7f338beff000 rw-p 00000000 00:00 0 
+7f338beff000-7f338bf02000 ---p 00000000 00:00 0 
+7f338bf02000-7f338c000000 rw-p 00000000 00:00 0 
+7f338c000000-7f338c137000 rw-p 00000000 00:00 0 
+7f338c137000-7f3390000000 ---p 00000000 00:00 0 
+7f3390000000-7f3390004000 r--s 0002e000 08:01 8653846                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apkzlib/4.1.0/d5b6769410dff70448dfac18387fcea05ef11073/apkzlib-4.1.0.jar
+7f3390004000-7f3390006000 r--s 0000e000 08:01 8653737                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.google.flatbuffers/flatbuffers-java/1.12.0/8201cc7b511177a37071249e891f2f2fea4b32e9/flatbuffers-java-1.12.0.jar
+7f3390006000-7f3390016000 r--s 00107000 08:01 8653735                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.google.crypto.tink/tink/1.3.0-rc2/c7efb1ecc3b667b8a0789a1b019b06269037e19b/tink-1.3.0-rc2.jar
+7f3390016000-7f3390019000 r--s 00010000 08:01 8653734                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java-util/3.10.0/a68c906db83e93babbb4024ce91e7441bb7598dd/protobuf-java-util-3.10.0.jar
+7f3390019000-7f339001b000 r--s 00016000 08:01 8653731                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.squareup/javapoet/1.10.0/712c178d35185d8261295913c9f2a7d6867a6007/javapoet-1.10.0.jar
+7f339001b000-7f339001e000 r--s 0001d000 08:01 8653729                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.build.jetifier/jetifier-core/1.0.0-beta09/c98ee0e5579aed97e17f605a89b101115a2f5a61/jetifier-core-1.0.0-beta09.jar
+7f339001e000-7f339001f000 r--s 00003000 08:01 8653727                    /home/kaiser/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/6.0.3/e5becf2356695a396b788110e386c38bad523bfc/proguard-gradle-6.0.3.jar
+7f339001f000-7f3390021000 r--s 0000f000 08:01 8653726                    /home/kaiser/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/4.9/ee9e9eaa0a35360dcfeac129ff4923215fd65904/jopt-simple-4.9.jar
+7f3390021000-7f3390023000 r--s 0001a000 08:01 8653722                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/7.0/d74d4ba0dee443f68fb2dcb7fcdb945a2cd89912/asm-7.0.jar
+7f3390023000-7f3390025000 r--s 0000b000 08:01 8653851                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/7.0/29bc62dcb85573af6e62e5b2d735ef65966c4180/asm-tree-7.0.jar
+7f3390025000-7f3390027000 r--s 00007000 08:01 8653723                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/7.0/4b310d20d6f1c6b7197a75f1b5d69f169bc8ac1f/asm-analysis-7.0.jar
+7f3390027000-7f3390028000 r--s 00013000 08:01 8653725                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-util/7.0/18d4d07010c24405129a6dbb0e92057f8779fb9d/asm-util-7.0.jar
+7f3390028000-7f339002a000 r--s 00012000 08:01 8653724                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/7.0/478006d07b7c561ae3a92ddc1829bca81ae0cdd1/asm-commons-7.0.jar
+7f339002a000-7f339002f000 r--s 00025000 08:01 8653730                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.build.jetifier/jetifier-processor/1.0.0-beta09/fb2a015ff56e24939a88593ac73b84e627864476/jetifier-processor-1.0.0-beta09.jar
+7f339002f000-7f3390030000 r--s 00000000 08:01 8654154                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.build/transform-api/2.0.0-deprecated-use-gradle-api/47f6c56527c42425742fa9b56ffd3fd80763fe03/transform-api-2.0.0-deprecated-use-gradle-api.jar
+7f3390030000-7f3390031000 r--s 00003000 08:01 8653721                    /home/kaiser/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.3.72/916d54b9eb6442b615e6f1488978f551c0674720/kotlin-stdlib-jdk8-1.3.72.jar
+7f3390031000-7f3390036000 r--s 00040000 08:01 8653829                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools/common/27.1.0/2999a3827833da7c3258167566cd042d60cf533f/common-27.1.0.jar
+7f3390036000-7f3390039000 r--s 00017000 08:01 8653941                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/shared/27.1.0/1ffbad68155c565413b98df687b1e0f7651bff9c/shared-27.1.0.jar
+7f3390039000-7f339003e000 r--s 0002d000 08:01 8653939                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools/repository/27.1.0/cda08c985c2de2c3da0701e696b7b4cd088d3cba/repository-27.1.0.jar
+7f339003e000-7f33900c3000 r--s 006f2000 08:01 8653728                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.build/bundletool/0.14.0/e7ecfb48a6d43f4ec23475c9d04b96c97ecc101b/bundletool-0.14.0.jar
+7f33900c3000-7f33900c6000 ---p 00000000 00:00 0 
+7f33900c6000-7f33901c4000 rw-p 00000000 00:00 0 
+7f33901c4000-7f33901c7000 ---p 00000000 00:00 0 
+7f33901c7000-7f33902c5000 rw-p 00000000 00:00 0 
+7f33902c5000-7f33902c8000 ---p 00000000 00:00 0 
+7f33902c8000-7f33903c6000 rw-p 00000000 00:00 0 
+7f33903c6000-7f33903c9000 ---p 00000000 00:00 0 
+7f33903c9000-7f33904c7000 rw-p 00000000 00:00 0 
+7f33904c7000-7f33904ca000 ---p 00000000 00:00 0 
+7f33904ca000-7f33905c8000 rw-p 00000000 00:00 0 
+7f33905c8000-7f33905cb000 ---p 00000000 00:00 0 
+7f33905cb000-7f33906c9000 rw-p 00000000 00:00 0 
+7f33906c9000-7f33906cc000 ---p 00000000 00:00 0 
+7f33906cc000-7f33907ca000 rw-p 00000000 00:00 0 
+7f33907ca000-7f33907cd000 ---p 00000000 00:00 0 
+7f33907cd000-7f33908cb000 rw-p 00000000 00:00 0 
+7f33908cb000-7f33908ce000 ---p 00000000 00:00 0 
+7f33908ce000-7f33909cc000 rw-p 00000000 00:00 0 
+7f33909cc000-7f33909cf000 ---p 00000000 00:00 0 
+7f33909cf000-7f3390acd000 rw-p 00000000 00:00 0 
+7f3390acd000-7f3390ad0000 ---p 00000000 00:00 0 
+7f3390ad0000-7f3390bce000 rw-p 00000000 00:00 0 
+7f3390bce000-7f3390bd1000 ---p 00000000 00:00 0 
+7f3390bd1000-7f3390ccf000 rw-p 00000000 00:00 0 
+7f3390ccf000-7f3390cd2000 ---p 00000000 00:00 0 
+7f3390cd2000-7f3390dd0000 rw-p 00000000 00:00 0 
+7f3390dd0000-7f3390dd3000 ---p 00000000 00:00 0 
+7f3390dd3000-7f3390ed1000 rw-p 00000000 00:00 0 
+7f3390ed1000-7f3390ed4000 ---p 00000000 00:00 0 
+7f3390ed4000-7f3390fd2000 rw-p 00000000 00:00 0 
+7f3390fd2000-7f3390fd5000 ---p 00000000 00:00 0 
+7f3390fd5000-7f33910d3000 rw-p 00000000 00:00 0 
+7f33910d3000-7f33910d6000 ---p 00000000 00:00 0 
+7f33910d6000-7f33911d4000 rw-p 00000000 00:00 0 
+7f33911d4000-7f33911d7000 ---p 00000000 00:00 0 
+7f33911d7000-7f33912d5000 rw-p 00000000 00:00 0 
+7f33912d5000-7f33912d8000 ---p 00000000 00:00 0 
+7f33912d8000-7f33913d6000 rw-p 00000000 00:00 0 
+7f33913d6000-7f33913d9000 ---p 00000000 00:00 0 
+7f33913d9000-7f33914d7000 rw-p 00000000 00:00 0 
+7f33914d7000-7f33914da000 ---p 00000000 00:00 0 
+7f33914da000-7f33915d8000 rw-p 00000000 00:00 0 
+7f33915d8000-7f33915db000 ---p 00000000 00:00 0 
+7f33915db000-7f33916d9000 rw-p 00000000 00:00 0 
+7f33916d9000-7f33916dc000 ---p 00000000 00:00 0 
+7f33916dc000-7f33917da000 rw-p 00000000 00:00 0 
+7f33918d1000-7f33918d4000 ---p 00000000 00:00 0 
+7f33918d4000-7f33919d2000 rw-p 00000000 00:00 0 
+7f33919d2000-7f3391d6c000 r--s 04556000 08:01 6692255                    /home/kaiser/.gradle/caches/jars-8/o_a9428e5228aca11dedfcac67a8437af3/android.jar
+7f3391d6c000-7f33920e3000 r--s 02f83000 08:01 5907103                    /home/kaiser/.gradle/caches/jars-8/o_a96c9f7842d58921849efe27e55f9667/kotlin-plugin.jar
+7f33920e3000-7f33920e6000 ---p 00000000 00:00 0 
+7f33920e6000-7f33921e4000 rw-p 00000000 00:00 0 
+7f33921e4000-7f33921e7000 ---p 00000000 00:00 0 
+7f33921e7000-7f33922e5000 rw-p 00000000 00:00 0 
+7f33922e5000-7f33922e8000 ---p 00000000 00:00 0 
+7f33922e8000-7f33923e6000 rw-p 00000000 00:00 0 
+7f33923e6000-7f33923e9000 ---p 00000000 00:00 0 
+7f33923e9000-7f33924e7000 rw-p 00000000 00:00 0 
+7f33924e7000-7f33924ea000 ---p 00000000 00:00 0 
+7f33924ea000-7f33925e8000 rw-p 00000000 00:00 0 
+7f33925e8000-7f33925eb000 ---p 00000000 00:00 0 
+7f33925eb000-7f33926e9000 rw-p 00000000 00:00 0 
+7f33926e9000-7f33926ec000 ---p 00000000 00:00 0 
+7f33926ec000-7f33927ea000 rw-p 00000000 00:00 0 
+7f33927ea000-7f33927ed000 ---p 00000000 00:00 0 
+7f33927ed000-7f33928eb000 rw-p 00000000 00:00 0 
+7f33928eb000-7f33928ee000 ---p 00000000 00:00 0 
+7f33928ee000-7f33929ec000 rw-p 00000000 00:00 0 
+7f33929ec000-7f33929ef000 ---p 00000000 00:00 0 
+7f33929ef000-7f3392aed000 rw-p 00000000 00:00 0 
+7f3392aed000-7f3392af0000 ---p 00000000 00:00 0 
+7f3392af0000-7f3392bee000 rw-p 00000000 00:00 0 
+7f3392bee000-7f3392bf1000 ---p 00000000 00:00 0 
+7f3392bf1000-7f3392cef000 rw-p 00000000 00:00 0 
+7f3392cef000-7f3392cf2000 ---p 00000000 00:00 0 
+7f3392cf2000-7f3392df0000 rw-p 00000000 00:00 0 
+7f3392df0000-7f3392df3000 ---p 00000000 00:00 0 
+7f3392df3000-7f3392ef1000 rw-p 00000000 00:00 0 
+7f3392ef1000-7f3392ef4000 ---p 00000000 00:00 0 
+7f3392ef4000-7f3392ff2000 rw-p 00000000 00:00 0 
+7f3392ff2000-7f3392ff5000 ---p 00000000 00:00 0 
+7f3392ff5000-7f33930f3000 rw-p 00000000 00:00 0 
+7f33930f3000-7f33930f6000 ---p 00000000 00:00 0 
+7f33930f6000-7f33931f4000 rw-p 00000000 00:00 0 
+7f33931f4000-7f33931f7000 ---p 00000000 00:00 0 
+7f33931f7000-7f33932f5000 rw-p 00000000 00:00 0 
+7f33932f5000-7f33932f8000 ---p 00000000 00:00 0 
+7f33932f8000-7f33933f6000 rw-p 00000000 00:00 0 
+7f33933f6000-7f33933f9000 ---p 00000000 00:00 0 
+7f33933f9000-7f33934f7000 rw-p 00000000 00:00 0 
+7f33934f7000-7f33934fa000 ---p 00000000 00:00 0 
+7f33934fa000-7f33935f8000 rw-p 00000000 00:00 0 
+7f33935f8000-7f33935fb000 ---p 00000000 00:00 0 
+7f33935fb000-7f33936f9000 rw-p 00000000 00:00 0 
+7f33936f9000-7f33936fc000 ---p 00000000 00:00 0 
+7f33936fc000-7f33937fa000 rw-p 00000000 00:00 0 
+7f33937fc000-7f339393c000 rw-p 00000000 00:00 0 
+7f339393c000-7f33939fc000 ---p 00000000 00:00 0 
+7f33939fc000-7f33939ff000 ---p 00000000 00:00 0 
+7f33939ff000-7f3393afd000 rw-p 00000000 00:00 0 
+7f3393b3c000-7f3393e00000 r--s 01c65000 08:01 4203807                    /home/kaiser/.gradle/caches/jars-8/o_3df8cd05cb0c6213ff77f8cec79028ce/gradle-api-impldep-6.1.1.jar
+7f3393e00000-7f3394000000 rw-p 00000000 00:00 0 
+7f3394000000-7f3394914000 rw-p 00000000 00:00 0 
+7f3394914000-7f3398000000 ---p 00000000 00:00 0 
+7f3398000000-7f3398901000 rw-p 00000000 00:00 0 
+7f3398901000-7f339c000000 ---p 00000000 00:00 0 
+7f339c000000-7f339c9b9000 rw-p 00000000 00:00 0 
+7f339c9b9000-7f33a0000000 ---p 00000000 00:00 0 
+7f33a0000000-7f33a005a000 rw-p 00000000 00:00 0 
+7f33a005a000-7f33a4000000 ---p 00000000 00:00 0 
+7f33a4000000-7f33a4dde000 rw-p 00000000 00:00 0 
+7f33a4dde000-7f33a8000000 ---p 00000000 00:00 0 
+7f33a8000000-7f33a8060000 rw-p 00000000 00:00 0 
+7f33a8060000-7f33ac000000 ---p 00000000 00:00 0 
+7f33ac000000-7f33ac6b4000 rw-p 00000000 00:00 0 
+7f33ac6b4000-7f33b0000000 ---p 00000000 00:00 0 
+7f33b0000000-7f33b0273000 rw-p 00000000 00:00 0 
+7f33b0273000-7f33b4000000 ---p 00000000 00:00 0 
+7f33b4000000-7f33b5cc7000 rw-p 00000000 00:00 0 
+7f33b5cc7000-7f33b8000000 ---p 00000000 00:00 0 
+7f33b8000000-7f33b83e0000 rw-p 00000000 00:00 0 
+7f33b83e0000-7f33bc000000 ---p 00000000 00:00 0 
+7f33bc000000-7f33bc05d000 rw-p 00000000 00:00 0 
+7f33bc05d000-7f33c0000000 ---p 00000000 00:00 0 
+7f33c0000000-7f33c00ea000 rw-p 00000000 00:00 0 
+7f33c00ea000-7f33c4000000 ---p 00000000 00:00 0 
+7f33c4000000-7f33c422b000 rw-p 00000000 00:00 0 
+7f33c422b000-7f33c8000000 ---p 00000000 00:00 0 
+7f33c8000000-7f33c810d000 rw-p 00000000 00:00 0 
+7f33c810d000-7f33cc000000 ---p 00000000 00:00 0 
+7f33cc000000-7f33cc023000 rw-p 00000000 00:00 0 
+7f33cc023000-7f33d0000000 ---p 00000000 00:00 0 
+7f33d0000000-7f33d00c9000 rw-p 00000000 00:00 0 
+7f33d00c9000-7f33d4000000 ---p 00000000 00:00 0 
+7f33d4000000-7f33d404f000 rw-p 00000000 00:00 0 
+7f33d404f000-7f33d8000000 ---p 00000000 00:00 0 
+7f33d8000000-7f33d9390000 rw-p 00000000 00:00 0 
+7f33d9390000-7f33dc000000 ---p 00000000 00:00 0 
+7f33dc000000-7f33dcaf1000 rw-p 00000000 00:00 0 
+7f33dcaf1000-7f33e0000000 ---p 00000000 00:00 0 
+7f33e0000000-7f33e0a33000 rw-p 00000000 00:00 0 
+7f33e0a33000-7f33e4000000 ---p 00000000 00:00 0 
+7f33e4000000-7f33e6567000 rw-p 00000000 00:00 0 
+7f33e6567000-7f33e8000000 ---p 00000000 00:00 0 
+7f33e8000000-7f33ea4f6000 rw-p 00000000 00:00 0 
+7f33ea4f6000-7f33ec000000 ---p 00000000 00:00 0 
+7f33ec000000-7f33ec95e000 rw-p 00000000 00:00 0 
+7f33ec95e000-7f33f0000000 ---p 00000000 00:00 0 
+7f33f0000000-7f33f0002000 r--s 00009000 08:01 8653938                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/27.1.0/5345927c80b40fcdae47735726db23b5c9f20c0a/dvlib-27.1.0.jar
+7f33f0002000-7f33f0006000 r--s 00019000 08:01 8653875                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/27.1.0/cb0701115c2227b223ac65f0a158f0e80cc197d3/layoutlib-api-27.1.0.jar
+7f33f0006000-7f33f0010000 r--s 00092000 08:01 8653825                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/27.1.0/a1ceeaa51eab6500bfa772e183d252903ae6b767/sdklib-27.1.0.jar
+7f33f0010000-7f33f0012000 r--s 00008000 08:01 8653844                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/tracker/27.1.0/e5acd478607d3d13d80e4a47073b0797be97bac4/tracker-27.1.0.jar
+7f33f0012000-7f33f0013000 r--s 0000b000 08:01 8653840                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android/zipflinger/4.1.0/1318a26e3ef874686dd0e4d2a7f3a735b932d5/zipflinger-4.1.0.jar
+7f33f0013000-7f33f001a000 r--s 0006e000 08:01 8653831                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/27.1.0/41b9d5aacf5f56e792d6bf881fb931e12c9e047d/ddmlib-27.1.0.jar
+7f33f001a000-7f33f001d000 r--s 0000a000 08:01 8653815                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/4.1.0/18c4f4036b1737bf2108f5e0d33e363866c2c34b/builder-model-4.1.0.jar
+7f33f001d000-7f33f0039000 r--s 0015b000 08:01 8653827                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/27.1.0/8afcbb45547380b94b589b48058b7a0127f60b82/sdk-common-27.1.0.jar
+7f33f0039000-7f33f009f000 r--s 008b5000 08:01 8653711                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/4.1.0/aec0494498d0c8b9b46c226bf0ff02d73a299cac/builder-4.1.0.jar
+7f33f009f000-7f33f00a2000 ---p 00000000 00:00 0 
+7f33f00a2000-7f33f039e000 rw-p 00000000 00:00 0 
+7f33f039e000-7f33f03a0000 ---p 00000000 00:00 0 
+7f33f03a0000-7f33f05a0000 rw-p 00000000 00:00 0 
+7f33f05a0000-7f33f05a3000 ---p 00000000 00:00 0 
+7f33f05a3000-7f33f06a1000 rw-p 00000000 00:00 0 
+7f33f06a1000-7f33f06a4000 ---p 00000000 00:00 0 
+7f33f06a4000-7f33f09a2000 rw-p 00000000 00:00 0 
+7f33f09a2000-7f33f0ba2000 rw-p 00000000 00:00 0 
+7f33f0ba2000-7f33f0da2000 rw-p 00000000 00:00 0 
+7f33f0da2000-7f33f0da5000 ---p 00000000 00:00 0 
+7f33f0da5000-7f33f0ea3000 rw-p 00000000 00:00 0 
+7f33f0ea3000-7f33f0ea6000 ---p 00000000 00:00 0 
+7f33f0ea6000-7f33f11a4000 rw-p 00000000 00:00 0 
+7f33f11a4000-7f33f11a7000 ---p 00000000 00:00 0 
+7f33f11a7000-7f33f12a5000 rw-p 00000000 00:00 0 
+7f33f12a5000-7f33f131f000 r--s 01104000 08:01 5644100                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/lib/tools.jar
+7f33f131f000-7f33f151f000 rw-p 00000000 00:00 0 
+7f33f151f000-7f33f1520000 r--s 00003000 08:01 8653842                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android/signflinger/4.1.0/8f9580b81acbbf2978bb7bba45c30eb1ea552b88/signflinger-4.1.0.jar
+7f33f1520000-7f33f1521000 r--s 00003000 08:01 8653817                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/4.1.0/dd08119a1cfe1789b8749127033470cdf919e412/builder-test-api-4.1.0.jar
+7f33f1521000-7f33f152a000 r--s 0006e000 08:01 8653720                    /home/kaiser/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-compiler-common/4.1.0/ce7160dc1ad2cb4144d24da6b81a4bc97ec5c78b/databinding-compiler-common-4.1.0.jar
+7f33f152a000-7f33f152f000 r--s 0001f000 08:01 8653719                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-api/4.1.0/83d3f04ecfd6c6870ba511c817837868a6993f3a/gradle-api-4.1.0.jar
+7f33f152f000-7f33f1530000 r--s 00003000 08:01 8653717                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/crash/27.1.0/2eaed8e603076e9d6d2e0ddfccc2260c6bce7abc/crash-27.1.0.jar
+7f33f1530000-7f33f1537000 r--s 0009e000 08:01 8653713                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.build/aapt2-proto/4.1.0-6503028/858d5d4c84fba77dc8ce69feaa3c90457f06e6dc/aapt2-proto-4.1.0-6503028.jar
+7f33f1537000-7f33f153a000 r--s 00028000 08:01 8653915                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-model/27.1.0/18a262fd95b383b04f181bea7e8726701d026e9b/lint-model-27.1.0.jar
+7f33f153a000-7f33f153b000 r--s 00004000 08:01 8653718                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-gradle-api/27.1.0/2ed2e2ea08ef9bc4705153e5742209edc81344fd/lint-gradle-api-27.1.0.jar
+7f33f153b000-7f33f153f000 r--s 0002e000 08:01 8653830                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/27.1.0/f7c161c4f308ebc76ccc4915333eae4997f1b4a0/manifest-merger-27.1.0.jar
+7f33f153f000-7f33f1545000 r--s 0006f000 08:01 8653716                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.build/aaptcompiler/4.1.0/daed124c5fcc8b7cb56fb1278ccf0611b32394a1/aaptcompiler-4.1.0.jar
+7f33f1545000-7f33f15b0000 r--s 00558000 08:01 8653708                    /home/kaiser/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/4.1.0/b505c73b43e30569c32589b8638164cb650282d2/gradle-4.1.0.jar
+7f33f15b0000-7f33f15b1000 r--s 00003000 08:01 8655630                    /home/kaiser/.gradle/caches/jars-8/7bbeb3550dd6c3c69526d308ff1d3422/proj.jar
+7f33f15b1000-7f33f15b2000 r--s 00003000 08:01 8655631                    /home/kaiser/.gradle/caches/jars-8/e4de203100936c7a2928c087ba410e12/cp_proj.jar
+7f33f15b2000-7f33f15b3000 r--s 00000000 08:01 8655629                    /home/kaiser/.gradle/caches/jars-8/09ebf986d97882a186451d10558908fc/settings.jar
+7f33f15b3000-7f33f15b6000 ---p 00000000 00:00 0 
+7f33f15b6000-7f33f16b4000 rw-p 00000000 00:00 0 
+7f33f16b4000-7f33f16b7000 ---p 00000000 00:00 0 
+7f33f16b7000-7f33f19b5000 rw-p 00000000 00:00 0 
+7f33f19b5000-7f33f19b8000 ---p 00000000 00:00 0 
+7f33f19b8000-7f33f1ab6000 rw-p 00000000 00:00 0 
+7f33f1ab6000-7f33f1ab9000 ---p 00000000 00:00 0 
+7f33f1ab9000-7f33f1bb7000 rw-p 00000000 00:00 0 
+7f33f1bb7000-7f33f1bba000 ---p 00000000 00:00 0 
+7f33f1bba000-7f33f1eb8000 rw-p 00000000 00:00 0 
+7f33f1ec4000-7f33f1ec7000 ---p 00000000 00:00 0 
+7f33f1ec7000-7f33f1fc5000 rw-p 00000000 00:00 0 
+7f33f1fc5000-7f33f1fc6000 r--s 00003000 08:01 8657508                    /home/kaiser/.gradle/caches/jars-8/000b4e1970e57510190401ebbc16e80e/cp_proj.jar
+7f33f1fc6000-7f33f1fc7000 r--s 00000000 08:01 8657507                    /home/kaiser/.gradle/caches/jars-8/7c09d779c0bc11d465a894434340e1da/settings.jar
+7f33f1fc7000-7f33f2038000 r--s 0066e000 08:01 8653760                    /home/kaiser/.gradle/caches/jars-8/o_fafb47ba756870b96002c62052967e87/groovy-all-2.4.17.jar
+7f33f2038000-7f33f203d000 r--s 00036000 08:01 8653762                    /home/kaiser/.gradle/caches/jars-8/o_9874e1624a05557f45f30154906e752e/gson-2.8.6.jar
+7f33f203d000-7f33f203e000 r--s 00007000 08:01 8653776                    /home/kaiser/.gradle/caches/jars-8/740440fff958aa5980d5b4b45fe9f5e4/init.jar
+7f33f203e000-7f33f203f000 r--s 00002000 08:01 8655501                    /home/kaiser/.gradle/caches/jars-8/b7af6a9ddac0a849f586521e182dc716/cp_init.jar
+7f33f203f000-7f33f2040000 r--s 00001000 08:01 8657505                    /home/kaiser/.gradle/caches/jars-8/42c8940f9510f02441050059914b1b3e/init.jar
+7f33f2040000-7f33f2041000 r--s 00002000 08:01 8657502                    /home/kaiser/.gradle/caches/jars-8/1b40a353a50bf80b41f27724a306e802/cp_init.jar
+7f33f2041000-7f33f2042000 r--s 00003000 08:01 6429934                    /home/kaiser/.gradle/caches/jars-8/o_7629b0532e08de7abc5ffea1c03a0885/sam-with-receiver-ide-plugin.jar
+7f33f2042000-7f33f2044000 r--s 00004000 08:01 5513384                    /home/kaiser/.gradle/caches/jars-8/o_f20eb6a026134228a79b5668cbf4bdd5/annotations-java5.jar
+7f33f2044000-7f33f205e000 r--s 002c9000 08:01 7211346                    /home/kaiser/.gradle/caches/jars-8/o_600383bc95adab072a3aa605e41105d2/sdk-common.jar
+7f33f205e000-7f33f2090000 r--s 00277000 08:01 7080320                    /home/kaiser/.gradle/caches/jars-8/o_6b77ec927338a5d18736c56ad6ff4160/guava-28.2-jre.jar
+7f33f2090000-7f33f2096000 r--s 000a3000 08:01 7080318                    /home/kaiser/.gradle/caches/jars-8/o_cbc0a4ce2b998522f1a6de861fc799dd/android-base-common.jar
+7f33f2096000-7f33f20c6000 r--s 02a1f000 08:01 6948926                    /home/kaiser/.gradle/caches/jars-8/o_59ce409dc1edba35a88d2da37c92ed5a/sdk-tools.jar
+7f33f20c6000-7f33f20c7000 r--s 00005000 08:01 6817936                    /home/kaiser/.gradle/caches/jars-8/o_990d5b43d2d031ec4547b486b2db3f87/kapt3-idea.jar
+7f33f20c7000-7f33f20cb000 r--s 0004b000 08:01 7211348                    /home/kaiser/.gradle/caches/jars-8/o_96778c947bdc8f9a9948ebe55a13032b/android-extensions-ide.jar
+7f33f20cb000-7f33f20cc000 r--s 00004000 08:01 5773548                    /home/kaiser/.gradle/caches/jars-8/o_c178af0bf58a52b7e5f6cec7746cfcab/noarg-ide-plugin.jar
+7f33f20cc000-7f33f20cd000 r--s 00000000 08:01 6298856                    /home/kaiser/.gradle/caches/jars-8/o_497c99dc43ce8fece95d0e589f2459bd/gradle-appengine-builder-model-0.1.0.jar
+7f33f20cd000-7f33f20e1000 r--s 0013d000 08:01 6175156                    /home/kaiser/.gradle/caches/jars-8/o_d1ab99c475b94d1d9aa4be806ce14b44/kotlin-stdlib-1.3.72.jar
+7f33f20e1000-7f33f20f5000 r--s 0013d000 08:01 6038712                    /home/kaiser/.gradle/caches/jars-8/o_b92f8b98f8850b3f63e62195e18473a2/kotlin-stdlib.jar
+7f33f20f5000-7f33f20f6000 r--s 00003000 08:01 6563037                    /home/kaiser/.gradle/caches/jars-8/o_c6bdc029c93bd7cc9fdc6bac3bf0205c/allopen-ide-plugin.jar
+7f33f20f6000-7f33f20f9000 r--s 00022000 08:01 5643841                    /home/kaiser/.gradle/caches/jars-8/o_1baa546011f6fb557c2266c98272ff5f/kotlin-gradle-tooling.jar
+7f33f20f9000-7f33f2101000 r--s 000d2000 08:01 5381695                    /home/kaiser/.gradle/caches/jars-8/o_74677fa7d8575129229e90e15239d171/gradle-tooling-extension-impl.jar
+7f33f2101000-7f33f2103000 r--s 0000c000 08:01 5255212                    /home/kaiser/.gradle/caches/jars-8/o_63bc1430dcd3b39b0fa81253dfbb9bc4/external-system-rt.jar
+7f33f2103000-7f33f210e000 r--s 000aa000 08:01 4856600                    /home/kaiser/.gradle/caches/jars-8/o_2daa8a88fb68b91149a30998d45aa1f5/ion-java-1.5.2-2.jar
+7f33f210e000-7f33f2137000 r--s 004e2000 08:01 4725775                    /home/kaiser/.gradle/caches/jars-8/o_b58a7c98e882a9c9beb49f74471c5af6/util.jar
+7f33f2137000-7f33f2142000 r--s 00081000 08:01 4595895                    /home/kaiser/.gradle/caches/jars-8/o_b60b5dd218cf67e8c7a89e4eb4952e61/trove4j.jar
+7f33f2142000-7f33f2147000 r--s 00055000 08:01 4464248                    /home/kaiser/.gradle/caches/jars-8/o_f4daab3d88385d4c25de7c3692c3e1f7/gradle-tooling-extension-api.jar
+7f33f2147000-7f33f2148000 r--s 00002000 08:01 4335932                    /home/kaiser/.gradle/caches/jars-8/o_b28f540bf13198f32ea1052e54a37a12/gradle-toolingLoaderRt.jar
+7f33f2148000-7f33f22bc000 r--s 00d0a000 08:01 4071301                    /home/kaiser/.gradle/caches/jars-8/o_6ea1e8155310d879d66b539663a8ec15/gradle-api-6.1.1.jar
+7f33f22bc000-7f33f22bf000 ---p 00000000 00:00 0 
+7f33f22bf000-7f33f25bd000 rw-p 00000000 00:00 0 
+7f33f25bd000-7f33f25c0000 ---p 00000000 00:00 0 
+7f33f25c0000-7f33f26be000 rw-p 00000000 00:00 0 
+7f33f26be000-7f33f26c1000 ---p 00000000 00:00 0 
+7f33f26c1000-7f33f27bf000 rw-p 00000000 00:00 0 
+7f33f27bf000-7f33f27c2000 ---p 00000000 00:00 0 
+7f33f27c2000-7f33f28c0000 rw-p 00000000 00:00 0 
+7f33f28c0000-7f33f28c7000 r--s 00000000 08:01 14424055                   /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f33f28c7000-7f33f28ca000 ---p 00000000 00:00 0 
+7f33f28ca000-7f33f29c8000 rw-p 00000000 00:00 0 
+7f33f29c8000-7f33f29cd000 r--s 000a3000 08:01 3943380                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/jsse.jar
+7f33f29cd000-7f33f2bcd000 rw-p 00000000 00:00 0 
+7f33f2bcd000-7f33f2bd0000 ---p 00000000 00:00 0 
+7f33f2bd0000-7f33f2cce000 rw-p 00000000 00:00 0 
+7f33f2cce000-7f33f2cd6000 r-xp 00000000 08:01 4726193                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libmanagement.so
+7f33f2cd6000-7f33f2cd7000 r--p 00007000 08:01 4726193                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libmanagement.so
+7f33f2cd7000-7f33f2cd8000 rw-p 00008000 08:01 4726193                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libmanagement.so
+7f33f2cd8000-7f33f2cda000 r--s 00010000 08:01 6692158                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-tooling-api-builders-6.5.jar
+7f33f2cda000-7f33f2cee000 r--s 0014c000 08:01 6692142                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-instant-execution-6.5.jar
+7f33f2cee000-7f33f2cef000 r--s 00005000 08:01 6692134                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-build-profile-6.5.jar
+7f33f2cef000-7f33f2cf1000 r--s 00003000 08:01 6692138                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-tooling-native-6.5.jar
+7f33f2cf1000-7f33f2cf5000 r--s 00017000 08:01 6692143                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-testing-native-6.5.jar
+7f33f2cf5000-7f33f2cf6000 r--s 00001000 08:01 6692253                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/opentest4j-1.2.0.jar
+7f33f2cf6000-7f33f2cf9000 r--s 0001b000 08:01 6692225                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/junit-platform-launcher-1.6.0.jar
+7f33f2cf9000-7f33f2cfe000 r--s 00026000 08:01 6692223                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/junit-platform-engine-1.6.0.jar
+7f33f2cfe000-7f33f2d00000 r--s 00016000 08:01 6692224                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/junit-platform-commons-1.6.0.jar
+7f33f2d00000-7f33f2d01000 r--s 00000000 08:01 6692252                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/apiguardian-api-1.1.0.jar
+7f33f2d01000-7f33f2d02000 r--s 00003000 08:01 6692157                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-testing-junit-platform-6.5.jar
+7f33f2d02000-7f33f2d05000 r--s 00009000 08:01 6692151                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-signing-6.5.jar
+7f33f2d05000-7f33f2d07000 r--s 0000a000 08:01 6692153                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-scala-6.5.jar
+7f33f2d07000-7f33f2d08000 r--s 00004000 08:01 6692177                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-resources-sftp-6.5.jar
+7f33f2d08000-7f33f2d0a000 r--s 00005000 08:01 6692212                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/jmespath-java-1.11.633.jar
+7f33f2d0a000-7f33f2d14000 r--s 00081000 08:01 6692251                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/ion-java-1.0.2.jar
+7f33f2d14000-7f33f2d2b000 r--s 000e1000 08:01 6692185                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/aws-java-sdk-s3-1.11.633.jar
+7f33f2d2b000-7f33f2d36000 r--s 00074000 08:01 6692186                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/aws-java-sdk-kms-1.11.633.jar
+7f33f2d36000-7f33f2d4d000 r--s 000d5000 08:01 6692187                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/aws-java-sdk-core-1.11.633.jar
+7f33f2d4d000-7f33f2d4f000 r--s 00004000 08:01 6692174                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-resources-s3-6.5.jar
+7f33f2d4f000-7f33f2d5f000 r--s 0008d000 08:01 6692216                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/joda-time-2.10.4.jar
+7f33f2d5f000-7f33f2d74000 r--s 00142000 08:01 6692213                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/jackson-databind-2.10.2.jar
+7f33f2d74000-7f33f2d79000 r--s 00051000 08:01 6692214                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/jackson-core-2.10.2.jar
+7f33f2d79000-7f33f2d7c000 r--s 0000e000 08:01 6692215                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/jackson-annotations-2.10.2.jar
+7f33f2d7c000-7f33f2d7f000 r--s 0000d000 08:01 6692188                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/google-oauth-client-1.25.0.jar
+7f33f2d7f000-7f33f2d80000 r--s 00001000 08:01 6692189                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/google-http-client-jackson2-1.25.0.jar
+7f33f2d80000-7f33f2d8a000 r--s 00056000 08:01 6692190                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/google-http-client-1.25.0.jar
+7f33f2d8a000-7f33f2d8e000 r--s 0001d000 08:01 6692183                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/google-api-services-storage-v1-rev136-1.25.0.jar
+7f33f2d8e000-7f33f2d93000 r--s 0002d000 08:01 6692184                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/google-api-client-1.25.0.jar
+7f33f2d93000-7f33f2d95000 r--s 00003000 08:01 6692173                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-resources-gcs-6.5.jar
+7f33f2d95000-7f33f2d9c000 r--s 00030000 08:01 6692149                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-platform-play-6.5.jar
+7f33f2d9c000-7f33f2dae000 r--s 00078000 08:01 6692163                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-platform-native-6.5.jar
+7f33f2dae000-7f33f2db1000 r--s 0000f000 08:01 6692156                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-language-scala-6.5.jar
+7f33f2db1000-7f33f2dbd000 r--s 00053000 08:01 6692144                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-language-native-6.5.jar
+7f33f2dbd000-7f33f2dc4000 r--s 00035000 08:01 6692205                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/simple-4.1.21.jar
+7f33f2dc4000-7f33f2dd1000 r--s 00125000 08:01 6692204                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/rhino-1.7.10.jar
+7f33f2dd1000-7f33f2dd5000 r--s 00012000 08:01 6692150                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-javascript-6.5.jar
+7f33f2dd5000-7f33f2dd8000 r--s 00011000 08:01 6692148                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-jacoco-6.5.jar
+7f33f2dd8000-7f33f2dda000 r--s 00002000 08:01 6692137                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-ide-play-6.5.jar
+7f33f2dda000-7f33f2ddc000 r--s 00011000 08:01 6692203                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/dd-plist-1.21.jar
+7f33f2ddc000-7f33f2de3000 r--s 00035000 08:01 6692136                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-ide-native-6.5.jar
+7f33f2de3000-7f33f2dee000 r--s 00064000 08:01 6692139                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-ide-6.5.jar
+7f33f2dee000-7f33f2df0000 r--s 00007000 08:01 6692140                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-ear-6.5.jar
+7f33f2df0000-7f33f2df3000 r--s 00019000 08:01 6692135                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-code-quality-6.5.jar
+7f33f2df3000-7f33f2df5000 r--s 0000b000 08:01 6692194                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/maven-plugin-api-3.0.5.jar
+7f33f2df5000-7f33f2dfb000 r--s 0003f000 08:01 6692193                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/maven-compat-3.0.5.jar
+7f33f2dfb000-7f33f2e04000 r--s 0003b000 08:01 6692133                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-build-init-6.5.jar
+7f33f2e04000-7f33f2e05000 r--s 00003000 08:01 6692132                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-build-cache-http-6.5.jar
+7f33f2e05000-7f33f2e07000 r--s 00009000 08:01 6692131                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-antlr-6.5.jar
+7f33f2e07000-7f33f2e0a000 r--s 0001c000 08:01 6692141                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-kotlin-dsl-tooling-builders-6.5.jar
+7f33f2e0a000-7f33f2e0e000 r--s 00021000 08:01 6692250                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/xbean-reflect-3.7.jar
+7f33f2e0e000-7f33f2e10000 r--s 0000c000 08:01 6692248                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/wagon-provider-api-3.0.0.jar
+7f33f2e10000-7f33f2e11000 r--s 00008000 08:01 6692182                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/wagon-http-shared-3.0.0.jar
+7f33f2e11000-7f33f2e12000 r--s 00002000 08:01 6692181                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/wagon-http-3.0.0.jar
+7f33f2e12000-7f33f2e13000 r--s 00002000 08:01 6692208                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/wagon-file-3.0.0.jar
+7f33f2e13000-7f33f2e16000 r--s 0000c000 08:01 6692207                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/pmaven-groovy-0.8-20100325.jar
+7f33f2e16000-7f33f2e17000 r--s 00004000 08:01 6692206                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/pmaven-common-0.8-20100325.jar
+7f33f2e17000-7f33f2e1e000 r--s 00032000 08:01 6692192                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/plexus-container-default-1.7.1.jar
+7f33f2e1e000-7f33f2e21000 r--s 0000a000 08:01 6692245                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/plexus-classworlds-2.5.1.jar
+7f33f2e21000-7f33f2e23000 r--s 00006000 08:01 6692209                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/aether-connector-wagon-1.13.1.jar
+7f33f2e23000-7f33f2e2a000 r--s 00030000 08:01 6692152                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-maven-6.5.jar
+7f33f2e2a000-7f33f2e2c000 r--s 0000b000 08:01 6692168                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-publish-6.5.jar
+7f33f2e2c000-7f33f2e35000 r--s 00089000 08:01 6692210                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/testng-6.3.1.jar
+7f33f2e35000-7f33f2e3b000 r--s 0003d000 08:01 6692211                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/snakeyaml-1.17.jar
+7f33f2e3b000-7f33f2e45000 r--s 00054000 08:01 6692222                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/junit-4.13.jar
+7f33f2e45000-7f33f2e47000 r--s 0000f000 08:01 6692235                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/jcommander-1.72.jar
+7f33f2e47000-7f33f2e49000 r--s 00009000 08:01 6692233                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/hamcrest-core-1.3.jar
+7f33f2e49000-7f33f2e4e000 r--s 0005a000 08:01 6692226                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/bsh-2.0b6.jar
+7f33f2e4e000-7f33f2e52000 r--s 0001d000 08:01 6692159                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-testing-jvm-6.5.jar
+7f33f2e52000-7f33f2e5a000 r--s 00035000 08:01 6692165                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-testing-base-6.5.jar
+7f33f2e5a000-7f33f2e5e000 r--s 0001d000 08:01 6692162                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-platform-jvm-6.5.jar
+7f33f2e5e000-7f33f2e60000 r--s 00006000 08:01 6692161                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-language-jvm-6.5.jar
+7f33f2e60000-7f33f2e61000 r--s 00001000 08:01 6562980                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-java-compiler-plugin-6.5.jar
+7f33f2e61000-7f33f2e6a000 r--s 00047000 08:01 6692160                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-language-java-6.5.jar
+7f33f2e6a000-7f33f2e6c000 r--s 0000f000 08:01 6692155                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-language-groovy-6.5.jar
+7f33f2e6c000-7f33f2e6f000 r--s 0000f000 08:01 6692172                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-reporting-6.5.jar
+7f33f2e6f000-7f33f2e76000 r--s 00029000 08:01 6692166                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-platform-base-6.5.jar
+7f33f2e76000-7f33f2e78000 r--s 00006000 08:01 6692202                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/jatl-0.2.3.jar
+7f33f2e78000-7f33f2e7e000 r--s 0003a000 08:01 6692164                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-diagnostics-6.5.jar
+7f33f2e7e000-7f33f2e84000 r--s 00042000 08:01 6692154                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-plugins-6.5.jar
+7f33f2e84000-7f33f2e87000 r--s 00015000 08:01 6692147                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-ivy-6.5.jar
+7f33f2e87000-7f33f2e8a000 r--s 00012000 08:01 6692146                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-plugin-development-6.5.jar
+7f33f2e8a000-7f33f2e8e000 r--s 00024000 08:01 6692145                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-kotlin-dsl-provider-plugins-6.5.jar
+7f33f2e8e000-7f33f2e8f000 r--s 00000000 08:01 6562979                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-installation-beacon-6.5.jar
+7f33f2e8f000-7f33f2e92000 r--s 0000b000 08:01 6692167                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-plugin-use-6.5.jar
+7f33f2e92000-7f33f2e93000 r--s 00000000 08:01 6562982                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-runtime-api-info-6.5.jar
+7f33f2e93000-7f33f2e97000 r--s 0003c000 08:01 6692249                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/plexus-utils-3.1.0.jar
+7f33f2e97000-7f33f2e98000 r--s 00006000 08:01 6692243                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/plexus-sec-dispatcher-1.3.jar
+7f33f2e98000-7f33f2e9a000 r--s 0000d000 08:01 6692247                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/plexus-interpolation-1.14.jar
+7f33f2e9a000-7f33f2e9c000 r--s 00000000 08:01 6692246                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/plexus-component-annotations-1.5.5.jar
+7f33f2e9c000-7f33f2e9e000 r--s 00002000 08:01 6692244                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/plexus-cipher-1.7.jar
+7f33f2e9e000-7f33f2ea1000 r--s 00008000 08:01 6692241                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/maven-settings-builder-3.0.5.jar
+7f33f2ea1000-7f33f2ea3000 r--s 0000a000 08:01 6692242                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/maven-settings-3.0.5.jar
+7f33f2ea3000-7f33f2ea5000 r--s 00006000 08:01 6692240                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/maven-repository-metadata-3.0.5.jar
+7f33f2ea5000-7f33f2ea9000 r--s 00021000 08:01 6692238                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/maven-model-builder-3.0.5.jar
+7f33f2ea9000-7f33f2eab000 r--s 00026000 08:01 6692239                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/maven-model-3.0.5.jar
+7f33f2eab000-7f33f2eb7000 r--s 0007d000 08:01 6692198                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/maven-core-3.0.5.jar
+7f33f2eb7000-7f33f2eb9000 r--s 0000b000 08:01 6692237                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/maven-artifact-3.0.5.jar
+7f33f2eb9000-7f33f2ebb000 r--s 0000c000 08:01 6692228                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/maven-aether-provider-3.0.5.jar
+7f33f2ebb000-7f33f2ed0000 r--s 00116000 08:01 6692197                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/ivy-2.3.0.jar
+7f33f2ed0000-7f33f2ed5000 r--s 00036000 08:01 6692196                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gson-2.8.5.jar
+7f33f2ed5000-7f33f2ed6000 r--s 00014000 08:01 6692195                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/asm-util-7.3.1.jar
+7f33f2ed6000-7f33f2eda000 r--s 0001c000 08:01 6692230                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/aether-util-1.13.1.jar
+7f33f2eda000-7f33f2edb000 r--s 00003000 08:01 6692231                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/aether-spi-1.13.1.jar
+7f33f2edb000-7f33f2ede000 r--s 0001d000 08:01 6692229                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/aether-impl-1.13.1.jar
+7f33f2ede000-7f33f2ee1000 r--s 00013000 08:01 6692232                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/aether-api-1.13.1.jar
+7f33f2ee1000-7f33f2f1b000 r--s 00231000 08:01 6692170                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-dependency-management-6.5.jar
+7f33f2f1b000-7f33f2f34000 r--s 0013a000 08:01 6692219                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/xercesImpl-2.12.0.jar
+7f33f2f34000-7f33f2f36000 r--s 0001d000 08:01 6692218                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/nekohtml-1.9.22.jar
+7f33f2f36000-7f33f2f3c000 r--s 0005b000 08:01 6692217                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/jcifs-1.3.17.jar
+7f33f2f3c000-7f33f2f3e000 r--s 0000f000 08:01 6692176                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-resources-http-6.5.jar
+7f33f2f3e000-7f33f2f41000 r--s 0000d000 08:01 6692171                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-composite-builds-6.5.jar
+7f33f2f41000-7f33f2f43000 r--s 00009000 08:01 6692175                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-security-6.5.jar
+7f33f2f43000-7f33f2f68000 r--s 00281000 08:01 6692180                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/org.eclipse.jgit-5.5.0.201909110433-r.jar
+7f33f2f68000-7f33f2f6a000 r--s 00010000 08:01 6692236                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/jzlib-1.1.3.jar
+7f33f2f6a000-7f33f2f6e000 r--s 00041000 08:01 6692221                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/jsch-0.1.55.jar
+7f33f2f6e000-7f33f2f76000 r--s 00049000 08:01 6692234                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/httpcore-4.4.12.jar
+7f33f2f76000-7f33f2f83000 r--s 000b1000 08:01 6692191                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/httpclient-4.5.10.jar
+7f33f2f83000-7f33f2f8a000 r--s 0004e000 08:01 6692227                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/commons-codec-1.13.jar
+7f33f2f8a000-7f33f2feb000 r--s 0042c000 08:01 6692201                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/bcprov-jdk15on-1.64.jar
+7f33f2feb000-7f33f2fff000 r--s 000c0000 08:01 6692200                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/bcpkix-jdk15on-1.61.jar
+7f33f2fff000-7f33f3007000 r--s 00049000 08:01 6692199                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/bcpg-jdk15on-1.64.jar
+7f33f3007000-7f33f300a000 r--s 0000c000 08:01 6692169                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-version-control-6.5.jar
+7f33f300a000-7f33f300e000 r--s 0001d000 08:01 6692179                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/plugins/gradle-workers-6.5.jar
+7f33f300e000-7f33f3013000 r-xp 00000000 08:01 6948924                    /home/kaiser/.gradle/native/f6784746aeab05261644944871eae4fe03e0ef1612fff0a4a95f87b438bc6780/linux-amd64/libnative-platform.so
+7f33f3013000-7f33f3213000 ---p 00005000 08:01 6948924                    /home/kaiser/.gradle/native/f6784746aeab05261644944871eae4fe03e0ef1612fff0a4a95f87b438bc6780/linux-amd64/libnative-platform.so
+7f33f3213000-7f33f3214000 r--p 00005000 08:01 6948924                    /home/kaiser/.gradle/native/f6784746aeab05261644944871eae4fe03e0ef1612fff0a4a95f87b438bc6780/linux-amd64/libnative-platform.so
+7f33f3214000-7f33f3215000 rw-p 00006000 08:01 6948924                    /home/kaiser/.gradle/native/f6784746aeab05261644944871eae4fe03e0ef1612fff0a4a95f87b438bc6780/linux-amd64/libnative-platform.so
+7f33f3215000-7f33f3218000 r--s 00008000 08:01 6562946                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-build-events-6.5.jar
+7f33f3218000-7f33f3223000 r--s 00081000 08:01 6563007                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/trove4j-1.0.20181211.jar
+7f33f3223000-7f33f3225000 r--s 00009000 08:01 6563005                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlin-script-runtime-1.3.72.jar
+7f33f3225000-7f33f325f000 r--s 00284000 08:01 6563001                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlin-reflect-1.3.72.jar
+7f33f325f000-7f33f3276000 r--s 00108000 08:01 6563006                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlin-daemon-embeddable-1.3.72.jar
+7f33f3276000-7f33f34d1000 r--s 023fe000 08:01 6562981                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlin-compiler-embeddable-1.3.72-patched-for-gradle-6.5.jar
+7f33f34d1000-7f33f34d2000 r--s 00007000 08:01 6562976                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-wrapper-6.5.jar
+7f33f34d2000-7f33f34e2000 r--s 00050000 08:01 6562948                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-tooling-api-6.5.jar
+7f33f34e2000-7f33f34e3000 r--s 00000000 08:01 6562973                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-kotlin-dsl-tooling-models-6.5.jar
+7f33f34e3000-7f33f34f3000 r--s 0026b000 08:01 6563014                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlinx-metadata-jvm-0.1.0.jar
+7f33f34f3000-7f33f34f4000 r--s 00003000 08:01 6563002                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlin-stdlib-jdk8-1.3.72.jar
+7f33f34f4000-7f33f34f5000 r--s 00000000 08:01 6563003                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlin-stdlib-jdk7-1.3.72.jar
+7f33f34f5000-7f33f34f8000 r--s 00019000 08:01 6563010                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlin-scripting-jvm-host-embeddable-1.3.72.jar
+7f33f34f8000-7f33f34fc000 r--s 00027000 08:01 6563009                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlin-scripting-jvm-1.3.72.jar
+7f33f34fc000-7f33f3502000 r--s 00045000 08:01 6563012                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlin-scripting-compiler-impl-embeddable-1.3.72.jar
+7f33f3502000-7f33f350a000 r--s 0004b000 08:01 6563011                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlin-scripting-compiler-embeddable-1.3.72.jar
+7f33f350a000-7f33f350f000 r--s 00026000 08:01 6563008                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlin-scripting-common-1.3.72.jar
+7f33f350f000-7f33f3510000 r--s 00002000 08:01 6563013                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlin-sam-with-receiver-compiler-plugin-1.3.72.jar
+7f33f3510000-7f33f3529000 r--s 0013f000 08:01 6562947                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-kotlin-dsl-6.5.jar
+7f33f3529000-7f33f352b000 r--s 00005000 08:01 6562959                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-worker-processes-6.5.jar
+7f33f352b000-7f33f352d000 r--s 00005000 08:01 6562974                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-normalization-java-6.5.jar
+7f33f352d000-7f33f352f000 r--s 00007000 08:01 6562953                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-model-groovy-6.5.jar
+7f33f352f000-7f33f3531000 r--s 00000000 08:01 6562957                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-jvm-services-6.5.jar
+7f33f3531000-7f33f3533000 r--s 0000a000 08:01 6562969                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-file-watching-6.5.jar
+7f33f3533000-7f33f3538000 r--s 00023000 08:01 6562952                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-file-collections-6.5.jar
+7f33f3538000-7f33f3540000 r--s 00024000 08:01 6563023                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlin-stdlib-common-1.3.72.jar
+7f33f3540000-7f33f3554000 r--s 0013d000 08:01 6563004                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kotlin-stdlib-1.3.72.jar
+7f33f3554000-7f33f3556000 r--s 00003000 08:01 6563019                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/annotations-13.0.jar
+7f33f3556000-7f33f356f000 r--s 000eb000 08:01 6562954                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-model-core-6.5.jar
+7f33f356f000-7f33f3576000 r--s 0002d000 08:01 6562950                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-execution-6.5.jar
+7f33f3576000-7f33f3577000 r--s 00005000 08:01 6562978                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-docs-6.5.jar
+7f33f3577000-7f33f3579000 r--s 00004000 08:01 6562966                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-build-cache-packaging-6.5.jar
+7f33f3579000-7f33f357d000 r--s 0001c000 08:01 6562970                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-snapshots-6.5.jar
+7f33f357d000-7f33f357f000 r--s 00006000 08:01 6562961                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-process-services-6.5.jar
+7f33f357f000-7f33f3583000 r--s 00016000 08:01 6562962                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-resources-6.5.jar
+7f33f3583000-7f33f358b000 r--s 00036000 08:01 6562958                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-persistent-cache-6.5.jar
+7f33f358b000-7f33f358e000 r--s 0000d000 08:01 6562964                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-native-6.5.jar
+7f33f358e000-7f33f3590000 r--s 0000c000 08:01 6563018                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/objenesis-2.6.jar
+7f33f3590000-7f33f3592000 r--s 00000000 08:01 6563021                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/minlog-1.2.jar
+7f33f3592000-7f33f3598000 r--s 0004d000 08:01 6563017                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/kryo-2.24.0.jar
+7f33f3598000-7f33f359e000 r--s 0006d000 08:01 6563016                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/fastutil-8.3.0-min.jar
+7f33f359e000-7f33f35a5000 r--s 00031000 08:01 6562963                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-messaging-6.5.jar
+7f33f35a5000-7f33f35a7000 r--s 00005000 08:01 6562977                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-cli-6.5.jar
+7f33f35a7000-7f33f35a8000 r--s 00004000 08:01 6562968                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-build-option-6.5.jar
+7f33f35a8000-7f33f35aa000 r--s 00004000 08:01 6562986                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/log4j-over-slf4j-1.7.28.jar
+7f33f35aa000-7f33f35ac000 r--s 00000000 08:01 6562985                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/jul-to-slf4j-1.7.28.jar
+7f33f35ac000-7f33f35ae000 r--s 00003000 08:01 6562984                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/jcl-over-slf4j-1.7.28.jar
+7f33f35ae000-7f33f35b2000 r--s 00043000 08:01 6563015                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/jansi-1.18.jar
+7f33f35b2000-7f33f35bb000 r--s 0003c000 08:01 6562960                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-logging-6.5.jar
+7f33f35bb000-7f33f35bd000 r--s 00009000 08:01 6562971                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-files-6.5.jar
+7f33f35bd000-7f33f35bf000 r--s 00001000 08:01 6562967                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-build-cache-base-6.5.jar
+7f33f35bf000-7f33f35c3000 r--s 0000c000 08:01 6562951                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-build-cache-6.5.jar
+7f33f35c3000-7f33f35c4000 r--s 00006000 08:01 6562956                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-base-services-groovy-6.5.jar
+7f33f35c4000-7f33f35cd000 r--s 0002d000 08:01 6563000                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/xml-apis-1.4.01.jar
+7f33f35cd000-7f33f35ce000 r--s 00078000 08:01 6563031                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/native-platform-windows-i386-min-0.22-milestone-3.jar
+7f33f35ce000-7f33f35cf000 r--s 00078000 08:01 6563030                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/native-platform-windows-i386-0.22-milestone-3.jar
+7f33f35cf000-7f33f35d1000 r--s 00092000 08:01 6563029                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/native-platform-windows-amd64-min-0.22-milestone-3.jar
+7f33f35d1000-7f33f35d2000 r--s 00093000 08:01 6563028                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/native-platform-windows-amd64-0.22-milestone-3.jar
+7f33f35d2000-7f33f35d3000 r--s 00017000 08:01 6563027                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/native-platform-osx-amd64-0.22-milestone-3.jar
+7f33f35d3000-7f33f35d4000 r--s 00001000 08:01 6563035                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/native-platform-linux-amd64-ncurses6-0.22-milestone-3.jar
+7f33f35d4000-7f33f35d6000 r--s 00001000 08:01 6563034                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/native-platform-linux-amd64-ncurses5-0.22-milestone-3.jar
+7f33f35d6000-7f33f35d7000 r--s 0005b000 08:01 6563026                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/native-platform-linux-amd64-0.22-milestone-3.jar
+7f33f35d7000-7f33f35d8000 r--s 00002000 08:01 6563033                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/native-platform-linux-aarch64-ncurses6-0.22-milestone-3.jar
+7f33f35d8000-7f33f35da000 r--s 00001000 08:01 6563032                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/native-platform-linux-aarch64-ncurses5-0.22-milestone-3.jar
+7f33f35da000-7f33f35dc000 r--s 00059000 08:01 6563025                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/native-platform-linux-aarch64-0.22-milestone-3.jar
+7f33f35dc000-7f33f35dd000 r--s 00004000 08:01 6563024                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/native-platform-freebsd-amd64-libcpp-0.22-milestone-3.jar
+7f33f35dd000-7f33f35e2000 r--s 0001f000 08:01 6562999                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/native-platform-0.22-milestone-3.jar
+7f33f35e2000-7f33f35e3000 r--s 00000000 08:01 6562996                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/javax.inject-1.jar
+7f33f35e3000-7f33f35ef000 r--s 0008b000 08:01 6562997                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/commons-compress-1.19.jar
+7f33f35ef000-7f33f35f1000 r--s 0000b000 08:01 6562993                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/asm-tree-7.3.1.jar
+7f33f35f1000-7f33f35f3000 r--s 00010000 08:01 6562991                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/asm-commons-7.3.1.jar
+7f33f35f3000-7f33f3623000 r--s 0024c000 08:01 6562988                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/guava-27.1-android.jar
+7f33f3623000-7f33f36a3000 r--s 00782000 08:01 6562995                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/groovy-all-1.3-2.5.11.jar
+7f33f36a3000-7f33f36c3000 r--s 00204000 08:01 6562998                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/ant-1.10.7.jar
+7f33f36c3000-7f33f3700000 r--s 0021d000 08:01 6562949                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-core-6.5.jar
+7f33f3700000-7f33f370f000 r--s 00047000 08:01 6562955                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-core-api-6.5.jar
+7f33f370f000-7f33f371c000 r--s 00063000 08:01 6562965                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-base-services-6.5.jar
+7f33f371c000-7f33f371d000 ---p 00000000 00:00 0 
+7f33f371d000-7f33f381d000 rw-p 00000000 00:00 0 
+7f33f381d000-7f33f3820000 ---p 00000000 00:00 0 
+7f33f3820000-7f33f391e000 rw-p 00000000 00:00 0 
+7f33f391e000-7f33f391f000 ---p 00000000 00:00 0 
+7f33f391f000-7f33f3922000 ---p 00000000 00:00 0 
+7f33f3922000-7f33f3a1f000 rw-p 00000000 00:00 0 
+7f33f3a1f000-7f33f3a20000 ---p 00000000 00:00 0 
+7f33f3a20000-7f33f3a23000 ---p 00000000 00:00 0 
+7f33f3a23000-7f33f3b20000 rw-p 00000000 00:00 0 
+7f33f3b20000-7f33f3b21000 ---p 00000000 00:00 0 
+7f33f3b21000-7f33f3b24000 ---p 00000000 00:00 0 
+7f33f3b24000-7f33f3c21000 rw-p 00000000 00:00 0 
+7f33f3c21000-7f33f3c24000 ---p 00000000 00:00 0 
+7f33f3c24000-7f33f3d22000 rw-p 00000000 00:00 0 
+7f33f3d22000-7f33f4000000 r--p 00000000 08:01 14158717                   /usr/lib/locale/locale-archive
+7f33f4000000-7f33f455f000 rw-p 00000000 00:00 0 
+7f33f455f000-7f33f8000000 ---p 00000000 00:00 0 
+7f33f8000000-7f33f8094000 rw-p 00000000 00:00 0 
+7f33f8094000-7f33fc000000 ---p 00000000 00:00 0 
+7f33fc000000-7f33fc9ac000 rw-p 00000000 00:00 0 
+7f33fc9ac000-7f3400000000 ---p 00000000 00:00 0 
+7f3400000000-7f3404000000 rw-p 00000000 00:00 0 
+7f3404000000-7f3404231000 rw-p 00000000 00:00 0 
+7f3404231000-7f3408000000 ---p 00000000 00:00 0 
+7f3408000000-7f3408a7d000 rw-p 00000000 00:00 0 
+7f3408a7d000-7f340c000000 ---p 00000000 00:00 0 
+7f340c000000-7f340c128000 rw-p 00000000 00:00 0 
+7f340c128000-7f3410000000 ---p 00000000 00:00 0 
+7f3410000000-7f3410002000 r--s 00007000 08:01 6562992                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/asm-analysis-7.3.1.jar
+7f3410002000-7f3410033000 rw-p 00000000 00:00 0 
+7f3410033000-7f341004a000 r-xp 00000000 08:01 4726226                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libnet.so
+7f341004a000-7f341004b000 r--p 00016000 08:01 4726226                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libnet.so
+7f341004b000-7f341004c000 rw-p 00017000 08:01 4726226                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libnet.so
+7f341004c000-7f341004f000 ---p 00000000 00:00 0 
+7f341004f000-7f341014d000 rw-p 00000000 00:00 0 
+7f341014d000-7f3410150000 ---p 00000000 00:00 0 
+7f3410150000-7f341024e000 rw-p 00000000 00:00 0 
+7f341024e000-7f341024f000 ---p 00000000 00:00 0 
+7f341024f000-7f3411000000 rw-p 00000000 00:00 0 
+7f3411000000-7f34143d0000 rwxp 00000000 00:00 0 
+7f34143d0000-7f3420000000 ---p 00000000 00:00 0 
+7f3420000000-7f3421cd0000 rw-p 00000000 00:00 0 
+7f3421cd0000-7f3424000000 ---p 00000000 00:00 0 
+7f3424000000-7f3424002000 r--s 00003000 08:01 6562972                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-hashing-6.5.jar
+7f3424002000-7f3424004000 r--s 00003000 08:01 6562983                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/jsr305-3.0.2.jar
+7f3424004000-7f3424005000 r--s 00000000 08:01 6562975                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-base-annotations-6.5.jar
+7f3424005000-7f3424356000 rw-p 00000000 00:00 0 
+7f3424356000-7f3424529000 r--s 03cdf000 08:01 3943377                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/rt.jar
+7f3424529000-7f34251fa000 rw-p 00000000 00:00 0 
+7f34251fa000-7f34251fb000 ---p 00000000 00:00 0 
+7f34251fb000-7f34252fb000 rw-p 00000000 00:00 0 
+7f34252fb000-7f34252fc000 ---p 00000000 00:00 0 
+7f34252fc000-7f34253fc000 rw-p 00000000 00:00 0 
+7f34253fc000-7f34253fd000 ---p 00000000 00:00 0 
+7f34253fd000-7f34254fd000 rw-p 00000000 00:00 0 
+7f34254fd000-7f34254fe000 ---p 00000000 00:00 0 
+7f34254fe000-7f34256bc000 rw-p 00000000 00:00 0 
+7f34256bc000-7f34258a9000 ---p 00000000 00:00 0 
+7f34258a9000-7f3425967000 rw-p 00000000 00:00 0 
+7f3425967000-7f3425b53000 ---p 00000000 00:00 0 
+7f3425b53000-7f3425ca9000 rw-p 00000000 00:00 0 
+7f3425ca9000-7f3425d7a000 rw-p 00000000 00:00 0 
+7f3425d7a000-7f342606a000 ---p 00000000 00:00 0 
+7f342606a000-7f3426075000 r-xp 00000000 08:01 11671918                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f3426075000-7f3426274000 ---p 0000b000 08:01 11671918                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f3426274000-7f3426275000 r--p 0000a000 08:01 11671918                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f3426275000-7f3426276000 rw-p 0000b000 08:01 11671918                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f3426276000-7f342627c000 rw-p 00000000 00:00 0 
+7f342627c000-7f3426293000 r-xp 00000000 08:01 11671915                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f3426293000-7f3426492000 ---p 00017000 08:01 11671915                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f3426492000-7f3426493000 r--p 00016000 08:01 11671915                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f3426493000-7f3426494000 rw-p 00017000 08:01 11671915                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f3426494000-7f3426496000 rw-p 00000000 00:00 0 
+7f3426496000-7f34264a1000 r-xp 00000000 08:01 11671920                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f34264a1000-7f34266a0000 ---p 0000b000 08:01 11671920                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f34266a0000-7f34266a1000 r--p 0000a000 08:01 11671920                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f34266a1000-7f34266a2000 rw-p 0000b000 08:01 11671920                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f34266a2000-7f34266aa000 r-xp 00000000 08:01 11671916                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f34266aa000-7f34268aa000 ---p 00008000 08:01 11671916                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f34268aa000-7f34268ab000 r--p 00008000 08:01 11671916                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f34268ab000-7f34268ac000 rw-p 00009000 08:01 11671916                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f34268ac000-7f34268b3000 r-xp 00000000 08:01 11671925                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f34268b3000-7f3426ab2000 ---p 00007000 08:01 11671925                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f3426ab2000-7f3426ab3000 r--p 00006000 08:01 11671925                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f3426ab3000-7f3426ab4000 rw-p 00007000 08:01 11671925                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f3426ab4000-7f3426c51000 r-xp 00000000 08:01 11671912                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f3426c51000-7f3426e50000 ---p 0019d000 08:01 11671912                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f3426e50000-7f3426e51000 r--p 0019c000 08:01 11671912                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f3426e51000-7f3426e52000 rw-p 0019d000 08:01 11671912                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f3426e52000-7f3427a81000 r-xp 00000000 08:01 4726199                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7f3427a81000-7f3427b29000 r--p 00c2e000 08:01 4726199                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7f3427b29000-7f3427b52000 rw-p 00cd6000 08:01 4726199                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7f3427b52000-7f3427b96000 rw-p 00000000 00:00 0 
+7f3427b96000-7f3427d7d000 r-xp 00000000 08:01 11671908                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f3427d7d000-7f3427f7d000 ---p 001e7000 08:01 11671908                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f3427f7d000-7f3427f81000 r--p 001e7000 08:01 11671908                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f3427f81000-7f3427f83000 rw-p 001eb000 08:01 11671908                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f3427f83000-7f3427f87000 rw-p 00000000 00:00 0 
+7f3427f87000-7f3427f8a000 r-xp 00000000 08:01 11671911                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f3427f8a000-7f3428189000 ---p 00003000 08:01 11671911                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f3428189000-7f342818a000 r--p 00002000 08:01 11671911                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f342818a000-7f342818b000 rw-p 00003000 08:01 11671911                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f342818b000-7f34281a5000 r-xp 00000000 08:01 11671923                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f34281a5000-7f34283a4000 ---p 0001a000 08:01 11671923                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f34283a4000-7f34283a5000 r--p 00019000 08:01 11671923                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f34283a5000-7f34283a6000 rw-p 0001a000 08:01 11671923                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f34283a6000-7f34283aa000 rw-p 00000000 00:00 0 
+7f34283aa000-7f34283d1000 r-xp 00000000 08:01 11671903                   /lib/x86_64-linux-gnu/ld-2.27.so
+7f34283d1000-7f34283d3000 r--s 00009000 08:01 6562987                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/slf4j-api-1.7.28.jar
+7f34283d3000-7f34283d5000 r--s 00000000 08:01 6563022                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/failureaccess-1.0.1.jar
+7f34283d5000-7f34283da000 r--s 00041000 08:01 6562989                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/commons-lang-2.6.jar
+7f34283da000-7f34283ea000 r-xp 00000000 08:01 4726217                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libnio.so
+7f34283ea000-7f34283eb000 ---p 00010000 08:01 4726217                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libnio.so
+7f34283eb000-7f34283ec000 r--p 00010000 08:01 4726217                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libnio.so
+7f34283ec000-7f34283ed000 rw-p 00011000 08:01 4726217                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libnio.so
+7f34283ed000-7f342843d000 rw-p 00000000 00:00 0 
+7f342843d000-7f3428458000 r-xp 00000000 08:01 4726225                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libzip.so
+7f3428458000-7f3428459000 r--p 0001a000 08:01 4726225                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libzip.so
+7f3428459000-7f342845a000 rw-p 0001b000 08:01 4726225                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libzip.so
+7f342845a000-7f3428482000 r-xp 00000000 08:01 4726224                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libjava.so
+7f3428482000-7f3428483000 r--p 00027000 08:01 4726224                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libjava.so
+7f3428483000-7f3428485000 rw-p 00028000 08:01 4726224                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libjava.so
+7f3428485000-7f3428486000 ---p 00000000 00:00 0 
+7f3428486000-7f3428489000 ---p 00000000 00:00 0 
+7f3428489000-7f3428588000 rw-p 00000000 00:00 0 
+7f3428588000-7f342859e000 r-xp 00000000 08:01 5773912                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/lib/amd64/jli/libjli.so
+7f342859e000-7f342859f000 r--p 00015000 08:01 5773912                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/lib/amd64/jli/libjli.so
+7f342859f000-7f34285a0000 rw-p 00016000 08:01 5773912                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/lib/amd64/jli/libjli.so
+7f34285a0000-7f34285a4000 r--s 00031000 08:01 6562990                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/commons-io-2.6.jar
+7f34285a4000-7f34285a6000 r--s 0001c000 08:01 6562994                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/asm-7.3.1.jar
+7f34285a6000-7f34285a7000 r--s 00004000 08:01 6563020                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/ant-launcher-1.10.7.jar
+7f34285a7000-7f34285a9000 r--s 00001000 08:01 6562945                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-bootstrap-6.5.jar
+7f34285a9000-7f34285b5000 r--s 00068000 08:01 6562944                    /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-launcher-6.5.jar
+7f34285b5000-7f34285bd000 rw-s 00000000 08:01 8657467                    /tmp/hsperfdata_kaiser/23120
+7f34285bd000-7f34285be000 rw-p 00000000 00:00 0 
+7f34285be000-7f34285bf000 ---p 00000000 00:00 0 
+7f34285bf000-7f34285cc000 r-xp 00000000 08:01 4726206                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libverify.so
+7f34285cc000-7f34285ce000 r--p 0000c000 08:01 4726206                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libverify.so
+7f34285ce000-7f34285cf000 rw-p 0000e000 08:01 4726206                    /home/kaiser/Downloads/android-studio-ide-201.6858069-linux/android-studio/jre/jre/lib/amd64/libverify.so
+7f34285cf000-7f34285d1000 rw-p 00000000 00:00 0 
+7f34285d1000-7f34285d2000 r--p 00027000 08:01 11671903                   /lib/x86_64-linux-gnu/ld-2.27.so
+7f34285d2000-7f34285d3000 rw-p 00028000 08:01 11671903                   /lib/x86_64-linux-gnu/ld-2.27.so
+7f34285d3000-7f34285d4000 rw-p 00000000 00:00 0 
+7ffe96a1f000-7ffe96a41000 rw-p 00000000 00:00 0                          [stack]
+7ffe96b91000-7ffe96b94000 r--p 00000000 00:00 0                          [vvar]
+7ffe96b94000-7ffe96b95000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xmx2048m -Dfile.encoding=UTF-8 -Duser.country=IN -Duser.language=en -Duser.variant 
+java_command: org.gradle.launcher.daemon.bootstrap.GradleDaemon 6.5
+java_class_path (initial): /home/kaiser/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/lib/gradle-launcher-6.5.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/kaiser/anaconda3/condabin:/opt/intel/openvino_2019.3.376/deployment_tools/model_optimizer:/home/kaiser/.local/share/umake/bin:/home/kaiser/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+USERNAME=kaiser
+LD_LIBRARY_PATH=/opt/intel/openvino_2019.3.376/opencv/lib:/opt/intel/opencl:/opt/intel/openvino_2019.3.376/deployment_tools/inference_engine/external/hddl/lib:/opt/intel/openvino_2019.3.376/deployment_tools/inference_engine/external/gna/lib:/opt/intel/openvino_2019.3.376/deployment_tools/inference_engine/external/mkltiny_lnx/lib:/opt/intel/openvino_2019.3.376/deployment_tools/inference_engine/external/tbb/lib:/opt/intel/openvino_2019.3.376/deployment_tools/inference_engine/lib/intel64:/opt/intel/openvino_2019.3.376/openvx/lib:
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa13c80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa13c80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x874670], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x874670], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x874670], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x874670], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x874540], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x874730], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x874730], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x874730], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x874730], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION="Ubuntu 18.04.5 LTS"
+
+uname:Linux 5.4.0-48-generic #52~18.04.1-Ubuntu SMP Thu Sep 10 12:50:22 UTC 2020 x86_64
+libc:glibc 2.27 NPTL 2.27 
+rlimit: STACK 8192k, CORE 0k, NPROC 63439, NOFILE 4096, AS infinity
+load average:1.37 1.22 1.28
+
+/proc/meminfo:
+MemTotal:       16288520 kB
+MemFree:          164600 kB
+MemAvailable:    3247204 kB
+Buffers:          501016 kB
+Cached:          4644048 kB
+SwapCached:        16380 kB
+Active:         12744568 kB
+Inactive:        2537136 kB
+Active(anon):   10900252 kB
+Inactive(anon):  1299580 kB
+Active(file):    1844316 kB
+Inactive(file):  1237556 kB
+Unevictable:       86644 kB
+Mlocked:              64 kB
+SwapTotal:       2097148 kB
+SwapFree:         780444 kB
+Dirty:             46540 kB
+Writeback:             0 kB
+AnonPages:      10211628 kB
+Mapped:          2991016 kB
+Shmem:           2069092 kB
+KReclaimable:     336784 kB
+Slab:             473092 kB
+SReclaimable:     336784 kB
+SUnreclaim:       136308 kB
+KernelStack:       35648 kB
+PageTables:       167812 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    10241408 kB
+Committed_AS:   32034912 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       53772 kB
+VmallocChunk:          0 kB
+Percpu:             3264 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      816892 kB
+DirectMap2M:    15853568 kB
+DirectMap1G:           0 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-3
+cpu_memory_nodes: 0
+active_processor_count: 4
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -2
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 15727935488
+memory_max_usage_in_bytes: 685064192
+
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 61 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i7-5600U CPU @ 2.60GHz
+stepping	: 4
+microcode	: 0x2f
+cpu MHz		: 3092.955
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit srbds
+bogomips	: 5188.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i7-5600U CPU @ 2.60GHz
+stepping	: 4
+microcode	: 0x2f
+cpu MHz		: 3092.955
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit srbds
+bogomips	: 5188.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i7-5600U CPU @ 2.60GHz
+stepping	: 4
+microcode	: 0x2f
+cpu MHz		: 3092.957
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit srbds
+bogomips	: 5188.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i7-5600U CPU @ 2.60GHz
+stepping	: 4
+microcode	: 0x2f
+cpu MHz		: 3092.956
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit srbds
+bogomips	: 5188.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 16288520k(164600k free), swap 2097148k(780444k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.242-b3-6222593) for linux-amd64 JRE (1.8.0_242-release-1644-b3-6222593), built by "android-build" with gcc 4.8
+
+time: Thu Dec 10 11:14:07 2020
+timezone: IST
+elapsed time: 15978 seconds (0d 4h 26m 18s)
+
